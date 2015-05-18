@@ -19,16 +19,16 @@ Attributes
 Card
 ----
 Associations
-* has_many :traits
-* has_many :abilities
+* has_zero_or_many :traits
+* has_zero_or_many :abilities
 
 Attributes
-* title
-* card_text
-* flavor_text
 * artwork
 * card_type => [Dude, Deed, Good, Action]
+* flavor_text
 * suit
+* title
+* text
 * value
 
 Cartridge
