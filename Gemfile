@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'factory_girl_rails'
+gem 'faker'
 gem 'rails', '4.2.1'
 gem 'rails-api'
 gem 'rspec-rails'
