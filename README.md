@@ -63,8 +63,8 @@ Associations
 Attributes
 * ghost_rock_cost
 * upkeep
-* influence_rating
-* control_point_rating
+* influence
+* control_points
 
 Trait
 -----
