@@ -64,7 +64,7 @@ Associations
 Attributes
 * upkeep
 * influence
-* control_points
+* control
 
 Trait
 -----
