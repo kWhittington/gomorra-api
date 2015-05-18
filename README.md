@@ -65,12 +65,6 @@ Attributes
 * influence_rating
 * control_point_rating
 
-SilverCartridge < Cartridge
----------------
-Attributes
-* active_phase #=> :deal
-* value #=> 1
-
 Trait
 -----
 
