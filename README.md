@@ -26,6 +26,7 @@ Attributes
 * artwork
 * card_type => [Dude, Deed, Good, Action]
 * flavor_text
+* ghost_rock_cost
 * suit
 * title
 * text
@@ -61,7 +62,6 @@ Associations
 * has_zero_or_many :stat_modifiers
 
 Attributes
-* ghost_rock_cost
 * upkeep
 * influence
 * control_points
