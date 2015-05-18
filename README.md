@@ -58,6 +58,7 @@ Dude
 ----
 Associations
 * has_a :cartridge_belt
+* has_zero_or_many :stat_modifiers
 
 Attributes
 * ghost_rock_cost
