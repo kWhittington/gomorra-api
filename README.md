@@ -19,14 +19,14 @@ Attributes
 BlankCartridge < Cartridge
 ---------
 Attributes
-* deal_bonus #=> 0
-* draw_bonus #=> 0
+* active_phase #=> :none
+* value #=> 0
 
 BronzeCartridge < Cartridge
 ---------------
 Attributes
-* deal_bonus #=> 0
-* draw_bonus #=> 1
+* active_phase #=> :draw
+* value #=> 0
 
 Card
 ----
@@ -68,8 +68,8 @@ Attributes
 SilverCartridge < Cartridge
 ---------------
 Attributes
-* deal_bonus #=> 1
-* draw_bonus #=> 0
+* active_phase #=> :deal
+* value #=> 1
 
 Trait
 -----
