@@ -16,18 +16,6 @@ Attributes
 * repeat (bool)
 * effect
 
-BlankCartridge < Cartridge
----------
-Attributes
-* active_phase #=> :none
-* value #=> 0
-
-BronzeCartridge < Cartridge
----------------
-Attributes
-* active_phase #=> :draw
-* value #=> 0
-
 Card
 ----
 Associations
@@ -47,12 +35,24 @@ Cartridge
 ---------
 Associations
 * belongs_to :cartridge_belt
+* has_a :cartidge_color
+
+Attributes
+* bonus #=> 1
 
 CartridgeBelt
 -------------
 Associations
 * belongs_to :dude
 * has_many :cartridges
+
+CartridgeColour
+---------------
+Associations
+* belongs_to :cartridge
+
+Attributes
+* active_phase #=> :deal, :draw
 
 Dude
 ----
