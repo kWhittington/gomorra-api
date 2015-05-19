@@ -110,6 +110,11 @@ Attributes
 * production
 * treasury
 
+Spell < Card
+-----
+Attributes
+* suit #=> heart
+
 Trait
 -----
 Associations
