@@ -20,8 +20,9 @@ Card
 ----
 Associations
 * belongs_to :gang
-* has_zero_or_many :traits
 * has_zero_or_many :abilities
+* has_zero_or_many :keywords
+* has_zero_or_many :traits
 
 Attributes
 * artwork
