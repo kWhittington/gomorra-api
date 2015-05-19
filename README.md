@@ -33,10 +33,7 @@ Attributes
 * artwork
 * card_type => [Action, Deed, Dude, Goods, Spell]
 * flavor_text
-* ghost_rock_cost
-* suit
 * title
-* value
 
 Cartridge
 ---------
