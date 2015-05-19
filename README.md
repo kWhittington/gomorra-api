@@ -83,6 +83,15 @@ Associations
 Attributes
 * name
 
+Goods < Card
+-----
+Associations
+* has_zero_or_one :cartridge_belt
+
+Attributes
+* control
+* influence
+
 Keyword
 -------
 Associations
