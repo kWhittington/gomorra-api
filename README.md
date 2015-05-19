@@ -67,7 +67,6 @@ Attributes
 
 Trait
 -----
-
 Associations
 * belongs_to :card
 
