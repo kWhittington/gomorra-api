@@ -91,6 +91,7 @@ Associations
 Attributes
 * control
 * influence
+* suit #=> :heart
 
 Keyword
 -------
