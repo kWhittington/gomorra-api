@@ -82,6 +82,11 @@ Associations
 Attributes
 * name
 
+Keyword
+-------
+Associations
+* has_zero_or_many :cards
+
 Outfit
 ------
 Associations
