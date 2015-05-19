@@ -119,7 +119,9 @@ Attributes
 Spell < Card
 -----
 Attributes
+* ghost_rock_cost
 * suit #=> heart
+* value
 
 Trait
 -----
