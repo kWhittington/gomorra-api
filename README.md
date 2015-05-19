@@ -64,8 +64,10 @@ Deed < Card
 ----
 Attributes
 * control
+* ghost_rock_cost
 * production
 * suit #=> :diamond
+* value
 
 Dude < Card
 ----
