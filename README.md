@@ -70,9 +70,10 @@ Associations
 * has_a :cartridge_belt
 
 Attributes
-* upkeep
-* influence
 * control
+* influence
+* suit #=> :spade
+* upkeep
 
 Gang
 ----
