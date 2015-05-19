@@ -36,7 +36,6 @@ Attributes
 * ghost_rock_cost
 * suit
 * title
-* text
 * value
 
 Cartridge
