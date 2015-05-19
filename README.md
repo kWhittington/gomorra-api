@@ -19,7 +19,9 @@ Attributes
 Action < Card
 ------
 Attributes
+* ghost_rock_cost
 * suit #=> club
+* value
 
 Card
 ----
