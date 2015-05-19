@@ -16,6 +16,11 @@ Attributes
 * repeat (bool)
 * effect
 
+Action < Card
+------
+Attributes
+* suit #=> club
+
 Card
 ----
 Associations
