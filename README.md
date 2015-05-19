@@ -65,6 +65,14 @@ Attributes
 * influence
 * control
 
+Gang
+----
+Associations
+* has_zero_or_many :cards
+
+Attributes
+* name
+
 Outfit
 ------
 Associations
