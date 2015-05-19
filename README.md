@@ -26,7 +26,7 @@ Associations
 
 Attributes
 * artwork
-* card_type => [Dude, Deed, Good, Action]
+* card_type => [Action, Deed, Dude, Goods, Spell]
 * flavor_text
 * ghost_rock_cost
 * suit
