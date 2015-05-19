@@ -56,6 +56,13 @@ Associations
 Attributes
 * active_phase #=> :deal, :draw
 
+Deed < Card
+----
+Attributes
+* control
+* production
+* suit #=> :diamond
+
 Dude
 ----
 Associations
