@@ -65,6 +65,18 @@ Attributes
 * influence
 * control
 
+Outfit
+------
+Associations
+* belongs_to :gang
+* has_zero_or_many :abilities
+* has_zero_or_many :traits
+
+Attributes
+* name
+* production
+* treasury
+
 Trait
 -----
 Associations
