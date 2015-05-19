@@ -97,8 +97,10 @@ Associations
 
 Attributes
 * control
+* ghost_rock_cost
 * influence
 * suit #=> :heart
+* value
 
 Joker < Card
 -----
