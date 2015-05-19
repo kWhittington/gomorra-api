@@ -63,7 +63,7 @@ Attributes
 * production
 * suit #=> :diamond
 
-Dude
+Dude < Card
 ----
 Associations
 * has_a :cartridge_belt
