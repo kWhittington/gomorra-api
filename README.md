@@ -76,9 +76,11 @@ Associations
 
 Attributes
 * control
+* ghost_rock_cost
 * influence
 * suit #=> :spade
 * upkeep
+* value
 
 Gang
 ----
