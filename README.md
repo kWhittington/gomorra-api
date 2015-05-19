@@ -98,7 +98,7 @@ Attributes
 * influence
 * suit #=> :heart
 
-Joker
+Joker < Card
 -----
 
 Keyword
@@ -106,7 +106,7 @@ Keyword
 Associations
 * has_zero_or_many :cards
 
-Outfit
+Outfit < Card
 ------
 Associations
 * belongs_to :gang
@@ -114,7 +114,6 @@ Associations
 * has_zero_or_many :traits
 
 Attributes
-* name
 * production
 * treasury
 
