@@ -4,23 +4,6 @@ The Rails based web API for an implementation of Doomtown Reloaded.
 Schema
 ======
 
-Ability
--------
-Associations
-* belongs_to :card
-
-Attributes
-* ability_cost
-* ghost_rock_cost
-* play_phase
-* repeat (bool)
-* effect
-
-Action < Card
-------
-Attributes
-* suit #=> club
-
 Card
 ----
 Associations
@@ -33,46 +16,14 @@ Attributes
 * artwork
 * card_type => [Action, Deed, Dude, Goods, Spell]
 * flavor_text
-* ghost_rock_cost
-* suit
 * title
 * text
-* value
-
-Cartridge
----------
-Associations
-* belongs_to :cartridge_belt
-* has_a :cartidge_color
-
-Attributes
-* bonus #=> 1
-
-CartridgeBelt
--------------
-Associations
-* belongs_to :dude
-* has_many :cartridges
-
-CartridgeColour
----------------
-Associations
-* belongs_to :cartridge
-
-Attributes
-* active_phase #=> :deal, :draw
-
-Deed < Card
-----
-Attributes
-* control
-* production
-* suit #=> :diamond
 
 Dude < Card
 ----
 Associations
-* has_a :cartridge_belt
+* has_a :clip
+* belongs_to :playing_card (suit, rank)
 
 Attributes
 * control
@@ -80,31 +31,37 @@ Attributes
 * suit #=> :spade
 * upkeep
 
-Gang
-----
+Deed < Card
+-----------
+
 Associations
-* has_zero_or_many :cards
+* belongs_to :playing_card (suit, rank)
 
 Attributes
-* name
+* control
+* production
+* suit #=> :diamond
+
 
 Goods < Card
 -----
 Associations
 * has_zero_or_one :cartridge_belt
+* belongs_to :playing_card (suit, rank)
 
 Attributes
 * control
 * influence
 * suit #=> :heart
 
+Action < Card
+------
+Attributes
+* suit #=> club
+* belongs_to :playing_card (suit, rank)
+
 Joker < Card
 -----
-
-Keyword
--------
-Associations
-* has_zero_or_many :cards
 
 Outfit < Card
 ------
@@ -117,10 +74,46 @@ Attributes
 * production
 * treasury
 
-Spell < Card
------
+!!!Keyword!!!
+-------
+Associations
+* has_many :cards
+
+
+
+Clip
+----
+
+Associations
+* belongs_to :dude
+* has_zero_or_many :bullet_modifiers
+* has_one :bullets, :as => :bullet_modifier
+
+BulletModifier
+--------------
+
+Associations
+* belongs_to :clip
+
 Attributes
-* suit #=> heart
+* type (ex. stud, draw)
+* rating (ex. -1, +3)
+
+
+
+Deck
+----
+
+Attributes
+
+Gang
+----
+Associations
+* has_zero_or_many :cards
+
+Attributes
+* name
+
 
 Trait
 -----
@@ -129,4 +122,16 @@ Associations
 
 Attributes
 * play_phase
+* effect
+
+Ability
+-------
+Associations
+* belongs_to :card
+
+Attributes
+* ability_cost
+* ghost_rock_cost
+* play_phase
+* repeat (bool)
 * effect
