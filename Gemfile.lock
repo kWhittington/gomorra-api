@@ -40,6 +40,7 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.0)
     builder (3.2.2)
+    decent_exposure (2.3.2)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     factory_girl (4.5.0)
@@ -135,6 +136,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  decent_exposure
   factory_girl_rails
   faker
   rails (= 4.2.1)
