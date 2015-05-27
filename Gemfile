@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'active_model_serializers'
+gem 'decent_exposure'
 gem 'factory_girl_rails'
 gem 'faker'
 gem 'rails', '4.2.1'
