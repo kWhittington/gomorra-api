@@ -1,6 +1,8 @@
 # gomorra_api
 The Rails based web API for an implementation of Doomtown Reloaded.
 
+This api following the specifications of [JSON API](http://jsonapi.org)
+
 Schema
 ======
 
