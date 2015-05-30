@@ -62,6 +62,8 @@ GEM
       activesupport (>= 4.1.0)
     i18n (0.7.0)
     json (1.8.2)
+    jsonapi-serializers (0.1.2)
+      activesupport
     loofah (2.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -159,6 +161,7 @@ DEPENDENCIES
   decent_exposure
   factory_girl_rails
   faker
+  jsonapi-serializers
   rails (= 4.2.1)
   rails-api
   rspec-collection_matchers
