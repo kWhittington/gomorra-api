@@ -11,7 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150524160858) do
+ActiveRecord::Schema.define(version: 20150610023006) do
+
+  create_table "actions", force: :cascade do |t|
+    t.string   "name"
+    t.string   "text"
+    t.integer  "cost"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "deeds", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "cost"
+    t.integer  "production"
+    t.integer  "control"
+    t.string   "keywords"
+    t.string   "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dudes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "bullet_type"
+    t.integer  "bullet_quantity"
+    t.integer  "influence"
+    t.integer  "control"
+    t.integer  "upkeep"
+    t.integer  "cost"
+    t.string   "keywords"
+    t.string   "text"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "gangs", force: :cascade do |t|
     t.string   "name",       null: false
@@ -20,5 +53,23 @@ ActiveRecord::Schema.define(version: 20150524160858) do
   end
 
   add_index "gangs", ["name"], name: "index_gangs_on_name", unique: true
+
+  create_table "goods", force: :cascade do |t|
+    t.integer  "cost"
+    t.string   "name"
+    t.string   "bullet_type"
+    t.integer  "bullet_quantity"
+    t.integer  "influence"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "playing_cards", force: :cascade do |t|
+    t.string   "suit"
+    t.string   "rank"
+    t.integer  "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
