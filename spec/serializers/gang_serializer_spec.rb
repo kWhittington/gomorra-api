@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: gangs
+#
+#  id         :integer          not null, primary key
+#  name       :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'support/rails/rails_helper'
 require 'support/serializers/gang_serializer_helper'
 

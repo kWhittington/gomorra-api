@@ -16,3 +16,4 @@ gem 'seed-fu'
 gem 'shoulda-matchers', group: :test
 gem 'spring', group: :development
 gem 'sqlite3'
+gem 'annotate'
