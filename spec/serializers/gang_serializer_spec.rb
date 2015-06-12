@@ -10,6 +10,7 @@
 
 require 'support/rails/rails_helper'
 require 'support/serializers/gang_serializer_helper'
+require 'support/serializers/gomorra_serializer_helper'
 
 tags = {
   serializer: :gang,
