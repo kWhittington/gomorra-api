@@ -8,4 +8,8 @@ class GomorraSerializer
     options.merge!(is_collection: true)
     serialize(collection, options)
   end
+
+  def self.singular(object, options = {})
+    serialize(object, options)
+  end
 end

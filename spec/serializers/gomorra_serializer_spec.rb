@@ -25,4 +25,16 @@ RSpec.describe GomorraSerializer, tags do
       end
     end
   end
+
+  describe '.singular(object, options = {})' do
+    context 'when provided no options' do
+      subject(:singular) { described_class.singular(object) }
+      # @todo replace with dynamic data.
+      let(:object) { Gang.first }
+
+      it 'is .serialize(object)' do
+        is_expected.to eq(described_class.serialize(object))
+      end
+    end
+  end
 end
