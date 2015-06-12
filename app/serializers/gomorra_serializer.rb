@@ -4,7 +4,7 @@ require 'jsonapi-serializers'
 class GomorraSerializer
   include JSONAPI::Serializer
 
-  def self.serialize_collection(collection, options)
+  def self.pluralize(collection, options = {})
     options.merge!(is_collection: true)
     serialize(collection, options)
   end
