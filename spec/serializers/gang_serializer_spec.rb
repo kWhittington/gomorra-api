@@ -18,6 +18,14 @@ tags = {
 }
 
 RSpec.describe GangSerializer, tags do
+  subject(:gang_serializer) { described_class.new(gang, options) }
+  let(:gang) { instance_double(Gang) }
+  let(:options) { Hash.new }
+
+  it 'is a GomorraSerializer' do
+    is_expected.to be_a(GomorraSerializer)
+  end
+
   describe '.serialize(model)' do
     subject(:serialize) { described_class.serialize(model) }
     let(:model) { create :gang }

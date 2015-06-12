@@ -8,11 +8,7 @@
 #  updated_at :datetime         not null
 #
 
-require 'jsonapi-serializers'
-
 # Standard serializer for Gang records.
-class GangSerializer
-  include JSONAPI::Serializer
-
+class GangSerializer < GomorraSerializer
   attribute :name
 end
