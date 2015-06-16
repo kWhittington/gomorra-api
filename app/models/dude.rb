@@ -25,5 +25,6 @@ class Dude < ActiveRecord::Base
   attr_readonly :influence
   attr_readonly :keywords
   attr_readonly :name
+  attr_readonly :text
   attr_readonly :upkeep
 end

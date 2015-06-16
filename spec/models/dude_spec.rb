@@ -51,6 +51,10 @@ RSpec.describe Dude, tags do
     is_expected.to have_readonly_attribute(:name)
   end
 
+  it 'has readonly text' do
+    is_expected.to have_readonly_attribute(:text)
+  end
+
   it 'has readonly upkeep' do
     is_expected.to have_readonly_attribute(:upkeep)
   end
