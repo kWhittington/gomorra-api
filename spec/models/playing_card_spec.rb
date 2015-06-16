@@ -17,6 +17,10 @@ tags = {
 }
 
 RSpec.describe PlayingCard, tags do
+  it 'has readonly rank' do
+    is_expected.to have_readonly_attribute(:rank)
+  end
+
   it 'has readonly suit' do
     is_expected.to have_readonly_attribute(:suit)
   end
