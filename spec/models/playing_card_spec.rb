@@ -12,6 +12,12 @@
 
 require 'support/rails/rails_helper'
 
-RSpec.describe PlayingCard, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+tags = {
+  type: :model
+}
+
+RSpec.describe PlayingCard, tags do
+  it 'has readonly suit' do
+    is_expected.to have_readonly_attribute(:suit)
+  end
 end
