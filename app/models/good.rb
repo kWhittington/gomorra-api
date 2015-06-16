@@ -12,5 +12,6 @@
 #  updated_at      :datetime         not null
 #
 
+# An item, spell, sidekick, or weapon a dude can be equipped with.
 class Good < ActiveRecord::Base
 end
