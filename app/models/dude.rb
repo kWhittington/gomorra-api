@@ -16,5 +16,6 @@
 #  updated_at      :datetime         not null
 #
 
+# A citizen of Gomorra Parish. Some might be more 'aggressive' than others.
 class Dude < ActiveRecord::Base
 end
