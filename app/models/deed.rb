@@ -18,6 +18,7 @@
 class Deed < ActiveRecord::Base
   attr_readonly :control
   attr_readonly :cost
+  attr_readonly :keywords
   attr_readonly :name
   attr_readonly :production
 end
