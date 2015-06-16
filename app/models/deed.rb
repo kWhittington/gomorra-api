@@ -21,4 +21,5 @@ class Deed < ActiveRecord::Base
   attr_readonly :keywords
   attr_readonly :name
   attr_readonly :production
+  attr_readonly :text
 end
