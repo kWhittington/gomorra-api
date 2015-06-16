@@ -26,9 +26,9 @@ RSpec.describe GomorraSerializer, tags do
     end
   end
 
-  describe '.singular(object, options = {})' do
+  describe '.one(object, options = {})' do
     context 'when provided no options' do
-      subject(:singular) { described_class.singular(object) }
+      subject(:one) { described_class.one(object) }
       # @todo replace with dynamic data.
       let(:object) { Gang.first }
 

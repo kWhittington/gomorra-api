@@ -9,7 +9,7 @@ class GomorraSerializer
     serialize(collection, options)
   end
 
-  def self.singular(object, options = {})
+  def self.one(object, options = {})
     serialize(object, options)
   end
 end
