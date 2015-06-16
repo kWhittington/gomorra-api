@@ -12,7 +12,6 @@
 
 # A card in a standard 52-count bicycle deck.
 class PlayingCard < ActiveRecord::Base
-  attr_readonly :rank
-  attr_readonly :suit
-  attr_readonly :value
+  belongs_to :rank
+  belongs_to :suit
 end

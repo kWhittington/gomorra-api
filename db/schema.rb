@@ -65,12 +65,15 @@ ActiveRecord::Schema.define(version: 20150616024444) do
   end
 
   create_table "playing_cards", force: :cascade do |t|
-    t.string   "suit"
-    t.string   "rank"
-    t.integer  "value"
+    t.integer  "rank_id"
+    t.integer  "suit_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "playing_cards", ["rank_id", "suit_id"], name: "index_playing_cards_on_rank_id_and_suit_id", unique: true
+  add_index "playing_cards", ["rank_id"], name: "index_playing_cards_on_rank_id"
+  add_index "playing_cards", ["suit_id"], name: "index_playing_cards_on_suit_id"
 
   create_table "ranks", force: :cascade do |t|
     t.string   "name"
