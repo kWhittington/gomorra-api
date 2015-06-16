@@ -23,6 +23,10 @@ tags = {
 }
 
 RSpec.describe Dude, tags do
+  it 'has readonly bullet_type' do
+    is_expected.to have_readonly_attribute(:bullet_type)
+  end
+
   it 'has readonly name' do
     is_expected.to have_readonly_attribute(:name)
   end
