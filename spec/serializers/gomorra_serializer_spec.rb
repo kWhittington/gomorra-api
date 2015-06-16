@@ -14,9 +14,9 @@ RSpec.describe GomorraSerializer, tags do
     is_expected.to be_a(JSONAPI::Serializer)
   end
 
-  describe '.pluralize(collection, options = {})' do
+  describe '.some(collection, options = {})' do
     context 'when provided no options' do
-      subject(:pluralize) { described_class.pluralize(collection) }
+      subject(:some) { described_class.some(collection) }
       let(:collection) { [] }
 
       it 'is .serialize(collection, is_collection: true)' do
