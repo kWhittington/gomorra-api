@@ -24,4 +24,8 @@ RSpec.describe Action, tags do
   it 'has readonly name' do
     is_expected.to have_readonly_attribute(:name)
   end
+
+  it 'has readonly text' do
+    is_expected.to have_readonly_attribute(:text)
+  end
 end

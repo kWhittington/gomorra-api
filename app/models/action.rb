@@ -14,4 +14,5 @@
 class Action < ActiveRecord::Base
   attr_readonly :cost
   attr_readonly :name
+  attr_readonly :text
 end
