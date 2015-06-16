@@ -14,4 +14,5 @@
 class PlayingCard < ActiveRecord::Base
   attr_readonly :rank
   attr_readonly :suit
+  attr_readonly :value
 end
