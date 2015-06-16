@@ -31,6 +31,10 @@ RSpec.describe Good, tags do
     is_expected.to have_readonly_attribute(:cost)
   end
 
+  it 'has readonly influence' do
+    is_expected.to have_readonly_attribute(:influence)
+  end
+
   it 'has readonly name' do
     is_expected.to have_readonly_attribute(:name)
   end
