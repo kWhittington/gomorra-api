@@ -15,6 +15,12 @@
 
 require 'support/rails/rails_helper'
 
-RSpec.describe Deed, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+tags = {
+  type: :model
+}
+
+RSpec.describe Deed, tags do
+  it 'has readonly name' do
+    is_expected.to have_readonly_attribute(:name)
+  end
 end
