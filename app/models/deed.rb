@@ -13,5 +13,7 @@
 #  updated_at :datetime         not null
 #
 
+# A property in Gomorra Parish. It can generate control, production, usually a
+# trait, and maybe an action.
 class Deed < ActiveRecord::Base
 end
