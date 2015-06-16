@@ -10,5 +10,6 @@
 #  updated_at :datetime         not null
 #
 
+# A card in a standard 52-count bicycle deck.
 class PlayingCard < ActiveRecord::Base
 end
