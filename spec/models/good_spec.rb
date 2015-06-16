@@ -19,6 +19,10 @@ tags = {
 }
 
 RSpec.describe Good, tags do
+  it 'has readonly cost' do
+    is_expected.to have_readonly_attribute(:cost)
+  end
+
   it 'has readonly name' do
     is_expected.to have_readonly_attribute(:name)
   end
