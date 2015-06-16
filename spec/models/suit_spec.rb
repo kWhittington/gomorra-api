@@ -1,5 +1,11 @@
-require 'rails_helper'
+require 'support/rails/rails_helper'
 
-RSpec.describe Suit, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+tags = {
+  type: :model
+}
+
+RSpec.describe Suit, tags do
+  it 'has readonly name' do
+    is_expected.to have_readonly_attribute(:name)
+  end
 end
