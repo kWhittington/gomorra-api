@@ -20,6 +20,10 @@ tags = {
 }
 
 RSpec.describe Deed, tags do
+  it 'has readonly control' do
+    is_expected.to have_readonly_attribute(:control)
+  end
+
   it 'has readonly cost' do
     is_expected.to have_readonly_attribute(:cost)
   end
