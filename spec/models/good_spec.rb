@@ -19,6 +19,10 @@ tags = {
 }
 
 RSpec.describe Good, tags do
+  it 'has readonly bullet_quantity' do
+    is_expected.to have_readonly_attribute(:bullet_quantity)
+  end
+
   it 'has readonly bullet_type' do
     is_expected.to have_readonly_attribute(:bullet_type)
   end
