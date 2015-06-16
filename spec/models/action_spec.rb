@@ -12,6 +12,12 @@
 
 require 'support/rails/rails_helper'
 
-RSpec.describe Action, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+tags = {
+  type: :model
+}
+
+RSpec.describe Action, tags do
+  it 'has readonly cost' do
+    is_expected.to have_readonly_attribute(:cost)
+  end
 end

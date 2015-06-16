@@ -12,4 +12,5 @@
 
 # A playable card type in Doomtown. Typically move the game forward.
 class Action < ActiveRecord::Base
+  attr_readonly :cost
 end
