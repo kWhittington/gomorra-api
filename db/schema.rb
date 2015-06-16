@@ -78,6 +78,6 @@ ActiveRecord::Schema.define(version: 20150616023025) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "suits", ["name"], name: "index_suits_on_name"
+  add_index "suits", ["name"], name: "index_suits_on_name", unique: true
 
 end
