@@ -43,6 +43,10 @@ RSpec.describe Dude, tags do
     is_expected.to have_readonly_attribute(:influence)
   end
 
+  it 'has readonly keywords' do
+    is_expected.to have_readonly_attribute(:keywords)
+  end
+
   it 'has readonly name' do
     is_expected.to have_readonly_attribute(:name)
   end
