@@ -5,6 +5,16 @@ tags = {
 }
 
 RSpec.describe Suit, tags do
+  describe '::NAMES' do
+    subject(:names) { described_class::NAMES }
+
+    it { is_expected.to have_exactly(4).items }
+    it { is_expected.to include('club') }
+    it { is_expected.to include('diamond') }
+    it { is_expected.to include('heart') }
+    it { is_expected.to include('spade') }
+  end
+
   it 'has many playing cards' do
     is_expected.to have_many(:playing_cards)
   end
