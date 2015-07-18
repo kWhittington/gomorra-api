@@ -5,11 +5,10 @@ tags = {
 }
 
 RSpec.describe Suit, tags do
-  it 'has many playing cards' do
-    is_expected.to have_many(:playing_cards)
-  end
+  subject(:suit) { described_class.new(name: name) }
+  let(:name) { Faker::Lorem.word }
 
-  it 'has readonly name' do
-    is_expected.to have_readonly_attribute(:name)
+  it 'has a #name reader' do
+    is_expected.to respond_to(:name)
   end
 end
