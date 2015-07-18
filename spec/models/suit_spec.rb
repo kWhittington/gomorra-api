@@ -35,4 +35,31 @@ RSpec.describe Suit, tags do
   it 'has a #name reader' do
     is_expected.to respond_to(:name)
   end
+
+  describe '.exist?(pluralized_name)' do
+    subject(:exist?) { described_class.exist?(pluralized_name) }
+    let(:pluralized_name) { Faker::Lorem.word }
+
+    context 'when pluralized_name is a key in NAMES' do
+      before :each do
+        allow(described_class::NAMES).to receive(:key?)
+          .and_return(true)
+      end
+
+      it 'is true' do
+        is_expected.to be_truthy
+      end
+    end
+
+    context 'when pluralized_name is not a key in NAMES' do
+      before :each do
+        allow(described_class::NAMES).to receive(:key?)
+          .and_return(false)
+      end
+
+      it 'is false' do
+        is_expected.to be_falsey
+      end
+    end
+  end
 end
