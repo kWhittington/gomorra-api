@@ -7,15 +7,21 @@ class Suit
     spades: 'spade'
   }
 
-  def self.of(pluralized_name)
-    unless SUIT_NAMES.key?(pluralized_name)
-      fail 'Suit of #{pluralized_name} does not exist'
-    end
+  attr_reader :name
 
-    new(name: SUIT_NAMES[pluralized_name])
+  def self.exist?(pluralized_name)
+    NAMES.key? pluralized_name
   end
 
-  attr_reader :name
+  def self.of(pluralized_name)
+    unless NAMES.key?(pluralized_name)
+      fail "Suit of #{pluralized_name} does not exist"
+    end
+
+    new(name: NAMES[pluralized_name])
+  end
+
+  private
 
   def initialize(name:)
     fail 'Cannot create Suit without name' if name.blank?
