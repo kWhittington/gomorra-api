@@ -14,7 +14,7 @@ class Suit
   end
 
   def self.of(pluralized_name)
-    unless NAMES.key?(pluralized_name)
+    unless exist?(pluralized_name)
       fail "Suit of #{pluralized_name} does not exist"
     end
 

@@ -62,4 +62,28 @@ RSpec.describe Suit, tags do
       end
     end
   end
+
+  describe '.of(pluralized_name)' do
+    subject(:of) { described_class.of(pluralized_name) }
+    let(:name) { Faker::Lorem.word }
+    let(:pluralized_name) { name.pluralize }
+
+    context 'when .exist?(pluralized_name) is true' do
+      before :each do
+        allow(described_class).to receive(:exist?)
+          .and_return(true)
+        described_class::NAMES[pluralized_name] = name
+      end
+
+      it 'is a suit' do
+        is_expected.to be_a(described_class)
+      end
+
+      it 'has a #name of NAMES[pluralized_name]' do
+        is_expected.to have_attributes(
+          name: name
+        )
+      end
+    end
+  end
 end
