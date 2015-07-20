@@ -1,7 +1,13 @@
 # A tier system for comparing values. The larger value wins.
-class Rank < ActiveRecord::Base
-  attr_readonly :name
-  attr_readonly :value
+class Rank
+  include Singleton
 
-  has_many :playing_cards
+  def name
+    self.class.to_s.downcase
+  end
+
+  def value
+    fail NotImplementedError,
+         "This #{self.class} has no implementation for: #value"
+  end
 end

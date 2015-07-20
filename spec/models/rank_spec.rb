@@ -1,19 +1,29 @@
 require 'support/rails/rails_helper'
 
 tags = {
+  model: :rank,
   type: :model
 }
 
 RSpec.describe Rank, tags do
-  it 'has many playing cards' do
-    is_expected.to have_many(:playing_cards)
+  subject(:rank) { described_class.instance }
+
+  describe '#name' do
+    subject(:name) { rank.name }
+
+    it 'is the class name, lowercase' do
+      is_expected.to eq(described_class.to_s.downcase)
+    end
   end
 
-  it 'has readonly name' do
-    is_expected.to have_readonly_attribute(:name)
-  end
+  describe '#value' do
+    subject(:value) { rank.value }
 
-  it 'has readonly value' do
-    is_expected.to have_readonly_attribute(:value)
+    it 'fails with a NotImplementedError' do
+      expect { value }.to raise_error(
+        NotImplementedError,
+        'This Rank has no implementation for: #value'
+      )
+    end
   end
 end
