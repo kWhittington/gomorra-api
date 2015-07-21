@@ -19,7 +19,7 @@ RSpec.describe Rank, tags do
   describe '#value' do
     subject(:value) { rank.value }
 
-    it 'fails with a NotImplementedError' do
+    it 'must be implemented by a subclass' do
       expect { value }.to raise_error(
         NotImplementedError,
         'This Rank has no implementation for: #value'
