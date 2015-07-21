@@ -1,3 +1,4 @@
+require 'support/models/rank_helper'
 require 'support/rails/rails_helper'
 
 tags = {
@@ -6,23 +7,15 @@ tags = {
 }
 
 RSpec.describe Rank, tags do
-  subject(:rank) { described_class.instance }
+  it_behaves_like 'a Rank'
 
-  describe '#name' do
-    subject(:name) { rank.name }
+  describe '.value' do
+    subject(:value) { described_class.value }
 
-    it 'is the class name, lowercase' do
-      is_expected.to eq(described_class.to_s.downcase)
-    end
-  end
-
-  describe '#value' do
-    subject(:value) { rank.value }
-
-    it 'must be implemented by a subclass' do
+    it 'must be implemented by subclasses' do
       expect { value }.to raise_error(
         NotImplementedError,
-        'This Rank has no implementation for: #value'
+        'This Rank has no implementation for: .value'
       )
     end
   end
