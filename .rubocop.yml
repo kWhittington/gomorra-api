@@ -5,3 +5,5 @@ require: rubocop-rspec
 
 AllCops:
   RunRailsCops: true
+
+Documentation: false

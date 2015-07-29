@@ -1,5 +1,16 @@
+# == Schema Information
+#
+# Table name: gangs
+#
+#  id         :integer          not null, primary key
+#  name       :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'support/rails/rails_helper'
 require 'support/serializers/gang_serializer_helper'
+require 'support/serializers/gomorra_serializer_helper'
 
 tags = {
   serializer: :gang,
@@ -7,6 +18,14 @@ tags = {
 }
 
 RSpec.describe GangSerializer, tags do
+  subject(:gang_serializer) { described_class.new(gang, options) }
+  let(:gang) { instance_double(Gang) }
+  let(:options) { Hash.new }
+
+  it 'is a GomorraSerializer' do
+    is_expected.to be_a(GomorraSerializer)
+  end
+
   describe '.serialize(model)' do
     subject(:serialize) { described_class.serialize(model) }
     let(:model) { create :gang }
