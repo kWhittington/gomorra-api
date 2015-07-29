@@ -6,7 +6,4 @@ tags = {
 }
 
 RSpec.describe Ranks, tags do
-  it 'responds to .[]' do
-    is_expected.to respond_to(:[])
-  end
 end
