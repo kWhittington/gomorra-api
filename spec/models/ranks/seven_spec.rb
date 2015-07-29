@@ -9,10 +9,11 @@ module Ranks
   }
 
   RSpec.describe Seven, tags do
+    subject(:seven) { described_class.new }
     it_behaves_like 'a Rank'
 
-    describe '.value' do
-      subject(:value) { described_class.value }
+    describe '#value' do
+      subject(:value) { seven.value }
 
       it 'is 7' do
         is_expected.to eq(7)

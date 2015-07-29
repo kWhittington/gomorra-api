@@ -3,7 +3,7 @@ require 'rank'
 module Ranks
   # The seventh-lowest rank possible.
   class Seven < Rank
-    def self.value
+    def value
       7
     end
   end

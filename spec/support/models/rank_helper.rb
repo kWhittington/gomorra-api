@@ -1,7 +1,7 @@
 module RankHelper
   RSpec.shared_examples 'a Rank' do
-    it 'responds to .value' do
-      expect(described_class).to respond_to(:value)
+    it 'responds to #value' do
+      is_expected.to respond_to(:value)
     end
   end
 end

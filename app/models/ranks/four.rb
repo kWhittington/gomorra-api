@@ -3,7 +3,7 @@ require 'rank'
 module Ranks
   # The fourth-lowest rank possible.
   class Four < Rank
-    def self.value
+    def value
       4
     end
   end

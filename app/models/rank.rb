@@ -1,7 +1,7 @@
 # A tier system for comparing values. The larger value wins.
 class Rank
-  def self.value
+  def value
     fail NotImplementedError,
-         "This #{self} has no implementation for: .value"
+         "This #{self.class} has no implementation for: #value"
   end
 end

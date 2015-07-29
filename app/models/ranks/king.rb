@@ -3,7 +3,7 @@ require 'rank'
 module Ranks
   # The thirteenth-lowest rank possible.
   class King < Rank
-    def self.value
+    def value
       13
     end
   end
