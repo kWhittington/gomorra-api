@@ -1,3 +1,4 @@
+require 'support/models/suit_helper'
 require 'support/rails/rails_helper'
 
 tags = {
