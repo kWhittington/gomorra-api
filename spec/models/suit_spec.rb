@@ -7,15 +7,16 @@ tags = {
 }
 
 RSpec.describe Suit, tags do
+  subject(:suit) { described_class.new }
   it_behaves_like 'a Suit'
 
-  describe '.name' do
-    subject(:name) { described_class.name }
+  describe '#name' do
+    subject(:name) { suit.name }
 
     it 'must be implemented by subclasses' do
       expect { name }.to raise_error(
         NotImplementedError,
-        'This Suit has no implementation for: .name'
+        'This Suit has no implementation for: #name'
       )
     end
   end

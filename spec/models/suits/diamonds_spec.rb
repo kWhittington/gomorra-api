@@ -8,10 +8,11 @@ module Suits
   }
 
   RSpec.describe Diamonds, tags do
+    subject(:diamonds) { described_class.new }
     it_behaves_like 'a Suit'
 
     describe '.name' do
-      subject(:name) { described_class.name }
+      subject(:name) { diamonds.name }
 
       it 'is "suit of diamonds"' do
         is_expected.to eq('suit of diamonds')

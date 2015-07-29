@@ -8,10 +8,11 @@ module Suits
   }
 
   RSpec.describe Clubs, tags do
+    subject(:clubs) { described_class.new }
     it_behaves_like 'a Suit'
 
-    describe '.name' do
-      subject(:name) { described_class.name }
+    describe '#name' do
+      subject(:name) { clubs.name }
 
       it 'is "suit of cards"' do
         is_expected.to eq('suit of clubs')

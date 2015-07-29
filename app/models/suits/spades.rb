@@ -2,7 +2,7 @@ require 'suit'
 
 module Suits
   class Spades < Suit
-    def self.name
+    def name
       'suit of spades'
     end
   end

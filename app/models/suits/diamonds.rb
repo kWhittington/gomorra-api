@@ -2,7 +2,7 @@ require 'suit'
 
 module Suits
   class Diamonds < Suit
-    def self.name
+    def name
       'suit of diamonds'
     end
   end

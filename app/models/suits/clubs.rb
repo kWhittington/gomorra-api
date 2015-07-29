@@ -2,7 +2,7 @@ require 'suit'
 
 module Suits
   class Clubs < Suit
-    def self.name
+    def name
       'suit of clubs'
     end
   end
