@@ -1,15 +1,20 @@
 # == Schema Information
 #
-# Table name: gangs
+# Table name: actions
 #
 #  id         :integer          not null, primary key
-#  name       :string           not null
+#  name       :string
+#  text       :string
+#  cost       :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 FactoryGirl.define do
-  factory :gang do
-    name { Faker::Company.name }
+  factory :action do
+    name "MyString"
+text "MyString"
+cost 1
   end
+
 end

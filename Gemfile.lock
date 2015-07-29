@@ -1,10 +1,3 @@
-GIT
-  remote: https://github.com/rails-api/active_model_serializers.git
-  revision: 12adb2e6d47c57c084cde2910dc2957c606ed391
-  specs:
-    active_model_serializers (0.10.0.rc1)
-      activemodel (>= 4.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -43,6 +36,9 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    annotate (2.6.10)
+      activerecord (>= 3.2, <= 4.3)
+      rake (~> 10.4)
     arel (6.0.0)
     ast (2.0.0)
     astrolabe (1.3.0)
@@ -108,6 +104,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.0.0)
     rake (10.4.2)
+    require_all (1.3.2)
     rspec-collection_matchers (1.1.2)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.2.3)
@@ -157,13 +154,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_model_serializers!
+  annotate
   decent_exposure
   factory_girl_rails
   faker
   jsonapi-serializers
   rails (= 4.2.1)
   rails-api
+  require_all
   rspec-collection_matchers
   rspec-rails
   rubocop

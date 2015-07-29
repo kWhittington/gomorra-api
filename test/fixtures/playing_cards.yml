@@ -1,0 +1,207 @@
+ace_of_clubs:
+  rank: ace
+  suit: club
+
+duce_of_clubs:
+  rank: deuce
+  suit: club
+
+three_of_clubs:
+  rank: three
+  suit: club
+
+four_of_clubs:
+  rank: four
+  suit: club
+
+five_of_clubs:
+  rank: five
+  suit: club
+
+six_of_clubs:
+  rank: six
+  suit: club
+
+seven_of_clubs:
+  rank: seven
+  suit: club
+
+eight_of_clubs:
+  rank: eight
+  suit: club
+
+nine_of_clubs:
+  rank: nine
+  suit: club
+
+ten_of_clubs:
+  rank: ten
+  suit: club
+
+jack_of_clubs:
+  rank: jack
+  suit: club
+
+queen_of_clubs:
+  rank: queen
+  suit: club
+
+king_of_clubs:
+  rank: king
+  suit: club
+
+ace_of_diamonds:
+  rank: ace
+  suit: diamond
+
+duce_of_diamonds:
+  rank: deuce
+  suit: diamond
+
+three_of_diamonds:
+  rank: three
+  suit: diamond
+
+four_of_diamonds:
+  rank: four
+  suit: diamond
+
+five_of_diamonds:
+  rank: five
+  suit: diamond
+
+six_of_diamonds:
+  rank: six
+  suit: diamond
+
+seven_of_diamonds:
+  rank: seven
+  suit: diamond
+
+eight_of_diamonds:
+  rank: eight
+  suit: diamond
+
+nine_of_diamonds:
+  rank: nine
+  suit: diamond
+
+ten_of_diamonds:
+  rank: ten
+  suit: diamond
+
+jack_of_diamonds:
+  rank: jack
+  suit: diamond
+
+queen_of_diamonds:
+  rank: queen
+  suit: diamond
+
+king_of_diamonds:
+  rank: king
+  suit: diamond
+
+ace_of_hearts:
+  rank: ace
+  suit: heart
+
+duce_of_hearts:
+  rank: deuce
+  suit: heart
+
+three_of_hearts:
+  rank: three
+  suit: heart
+
+four_of_hearts:
+  rank: four
+  suit: heart
+
+five_of_hearts:
+  rank: five
+  suit: heart
+
+six_of_hearts:
+  rank: six
+  suit: heart
+
+seven_of_hearts:
+  rank: seven
+  suit: heart
+
+eight_of_hearts:
+  rank: eight
+  suit: heart
+
+nine_of_hearts:
+  rank: nine
+  suit: heart
+
+ten_of_hearts:
+  rank: ten
+  suit: heart
+
+jack_of_hearts:
+  rank: jack
+  suit: heart
+
+queen_of_hearts:
+  rank: queen
+  suit: heart
+
+king_of_hearts:
+  rank: king
+  suit: heart
+
+ace_of_spades:
+  rank: ace
+  suit: spade
+
+duce_of_spades:
+  rank: deuce
+  suit: spade
+
+three_of_spades:
+  rank: three
+  suit: spade
+
+four_of_spades:
+  rank: four
+  suit: spade
+
+five_of_spades:
+  rank: five
+  suit: spade
+
+six_of_spades:
+  rank: six
+  suit: spade
+
+seven_of_spades:
+  rank: seven
+  suit: spade
+
+eight_of_spades:
+  rank: eight
+  suit: spade
+
+nine_of_spades:
+  rank: nine
+  suit: spade
+
+ten_of_spades:
+  rank: ten
+  suit: spade
+
+jack_of_spades:
+  rank: jack
+  suit: spade
+
+queen_of_spades:
+  rank: queen
+  suit: spade
+
+king_of_spades:
+  rank: king
+  suit: spade

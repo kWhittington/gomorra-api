@@ -1,0 +1,11 @@
+club:
+  name: 'club'
+
+diamond:
+  name: 'diamond'
+
+heart:
+  name: 'heart'
+
+spade:
+  name: 'spade'
