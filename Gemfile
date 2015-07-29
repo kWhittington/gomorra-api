@@ -8,6 +8,7 @@ gem 'faker'
 gem 'jsonapi-serializers'
 gem 'rails', '4.2.1'
 gem 'rails-api'
+gem 'require_all'
 gem 'rspec-rails'
 gem 'rspec-collection_matchers'
 gem 'rubocop', group: :development, require: false
