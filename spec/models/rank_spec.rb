@@ -8,16 +8,12 @@ tags = {
 
 RSpec.describe Rank, tags do
   subject(:rank) { described_class.new }
-  it_behaves_like 'a Rank'
 
-  describe '#value' do
-    subject(:value) { rank.value }
+  it 'has a readonly name' do
+    is_expected.to have_readonly_attribute(:name)
+  end
 
-    it 'must be implemented by subclasses' do
-      expect { value }.to raise_error(
-        NotImplementedError,
-        'This Rank has no implementation for: #value'
-      )
-    end
+  it 'has a readonly value' do
+    is_expected.to have_readonly_attribute(:value)
   end
 end
