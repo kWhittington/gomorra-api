@@ -16,4 +16,12 @@ RSpec.describe Rank, tags do
   it 'has a readonly value' do
     is_expected.to have_readonly_attribute(:value)
   end
+
+  it 'validates uniqueness, case insensitive, of name' do
+    is_expected.to validate_uniqueness_of(:name)
+  end
+
+  it 'validates uniqueness of value' do
+    is_expected.to validate_uniqueness_of(:value)
+  end
 end
