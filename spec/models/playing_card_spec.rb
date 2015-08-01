@@ -1,22 +1,13 @@
-# == Schema Information
-#
-# Table name: playing_cards
-#
-#  id         :integer          not null, primary key
-#  suit       :string
-#  rank       :string
-#  value      :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#
-
 require 'support/rails/rails_helper'
 
 tags = {
+  model: :playing_card,
   type: :model
 }
 
 RSpec.describe PlayingCard, tags do
+  subject(:playing_card) { described_class.new }
+
   it 'belongs to a rank' do
     is_expected.to belong_to(:rank)
   end
