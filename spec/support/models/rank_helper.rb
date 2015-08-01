@@ -1,9 +1,4 @@
 module RankHelper
-  RSpec.shared_examples 'a Rank' do
-    it 'responds to #value' do
-      is_expected.to respond_to(:value)
-    end
-  end
 end
 
 RSpec.configure do |config|
