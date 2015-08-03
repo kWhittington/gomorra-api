@@ -8,4 +8,7 @@ class PlayingCard < ActiveRecord::Base
       message: 'there can only be one rank of each suit',
       scope: :suit_id
     }
+
+  validates_associated :rank
+  validates_associated :suit
 end
