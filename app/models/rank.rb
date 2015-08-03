@@ -3,6 +3,10 @@ class Rank < ActiveRecord::Base
   attr_readonly :name
   attr_readonly :value
 
-  validates :name, uniqueness: { case_sensitive: false }
-  validates :value, uniqueness: true
+  validates :name,
+    presence: true,
+    uniqueness: { case_sensitive: false }
+  validates :value,
+    presence: true,
+    uniqueness: true
 end
