@@ -43,4 +43,12 @@ RSpec.describe Rank, tags do
       is_expected.to eq(described_class.pluck(:name))
     end
   end
+
+  describe '.values' do
+    subject(:values) { described_class.values }
+
+    it 'is a collection of all rank values' do
+      is_expected.to eq(described_class.pluck(:value))
+    end
+  end
 end

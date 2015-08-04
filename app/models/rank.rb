@@ -13,4 +13,8 @@ class Rank < ActiveRecord::Base
   def self.names
     pluck(:name)
   end
+
+  def self.values
+    pluck(:value)
+  end
 end
