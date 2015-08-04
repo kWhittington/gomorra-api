@@ -41,4 +41,24 @@ RSpec.describe PlayingCard, tags do
       end
     end
   end
+
+  describe '.exists_with_suit(name)' do
+    subject(:exists_with_suit) { described_class.exists_with_suit(name) }
+
+    context 'when a playing card with the suit exists' do
+      let(:name) { Suit.names.sample }
+
+      it 'is true' do
+        is_expected.to be_truthy
+      end
+    end
+
+    context 'when a playing card with the suit does not exist' do
+      let(:name) { "#{Faker::Lorem.word}1x" }
+
+      it 'is false' do
+        is_expected.to be_falsey
+      end
+    end
+  end
 end
