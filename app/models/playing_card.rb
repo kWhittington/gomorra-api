@@ -23,4 +23,8 @@ class PlayingCard < ActiveRecord::Base
   def self.with_rank(name)
     includes(:rank).where(ranks: { name: name })
   end
+
+  def self.with_suit(name)
+    includes(:suit).where(suits: { name: name })
+  end
 end
