@@ -61,4 +61,15 @@ RSpec.describe PlayingCard, tags do
       end
     end
   end
+
+  describe '.with_rank(name)' do
+    subject(:with_rank) { described_class.with_rank(name) }
+    let(:name) { Rank.names.sample }
+
+    it 'is a collection of playing cards with the specified ranking' do
+      playing_cards = described_class.includes(:rank)
+                      .where(ranks: { name: name })
+      is_expected.to eq(playing_cards)
+    end
+  end
 end
