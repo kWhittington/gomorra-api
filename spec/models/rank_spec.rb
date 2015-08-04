@@ -35,4 +35,12 @@ RSpec.describe Rank, tags do
   it 'validates uniqueness of value' do
     is_expected.to validate_uniqueness_of(:value)
   end
+
+  describe '.names' do
+    subject(:names) { described_class.names }
+
+    it 'is a collection of all rank names' do
+      is_expected.to eq(described_class.pluck(:name))
+    end
+  end
 end
