@@ -5,4 +5,8 @@ class Suit < ActiveRecord::Base
   validates :name,
             presence: true,
             uniqueness: { case_sensitive: false }
+
+  def self.names
+    pluck(:name)
+  end
 end
