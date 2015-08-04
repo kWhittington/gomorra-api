@@ -31,4 +31,14 @@ RSpec.describe PlayingCards, tags do
       is_expected.to eq(playing_cards)
     end
   end
+
+  describe '.suit(name)' do
+    subject(:suit) { described_class.suit(name) }
+    let(:name) { Suit.pluck(:name).sample }
+
+    it 'is a collection of all playing cards with a suit with the name' do
+      playing_cards = PlayingCard.includes(:suit).where(suits: { name: name })
+      is_expected.to eq(playing_cards)
+    end
+  end
 end
