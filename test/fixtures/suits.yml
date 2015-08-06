@@ -1,11 +1,11 @@
-club:
-  name: 'club'
+clubs:
+  name: 'clubs'
 
-diamond:
-  name: 'diamond'
+diamonds:
+  name: 'diamonds'
 
-heart:
-  name: 'heart'
+hearts:
+  name: 'hearts'
 
-spade:
-  name: 'spade'
+spades:
+  name: 'spades'

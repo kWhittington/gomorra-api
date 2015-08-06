@@ -63,7 +63,7 @@ Associations
 Attributes
 * control
 * production
-* suit #=> :diamond
+* suit #=> :dimaonds
 
 Dude < Card
 ----
@@ -74,7 +74,7 @@ Associations
 Attributes
 * control
 * influence
-* suit #=> :spade
+* suit #=> :spades
 * upkeep
 
 Gang
@@ -94,7 +94,7 @@ Associations
 Attributes
 * control
 * influence
-* suit #=> :heart
+* suit #=> :hearts
 
 Joker < Card
 -----
