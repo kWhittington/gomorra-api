@@ -22,15 +22,16 @@ RSpec.describe PlayingCard, tags do
       .scoped_to(:suit_id)
   end
 
-  describe '.ace' do
-    subject(:ace) { described_class.ace }
+  describe 'magic rank finders' do
+    subject(:finder) { described_class.send(method) }
+    let(:method) { Rank.names.sample }
 
     it 'is a relation' do
       is_expected.to be_an(ActiveRecord::Relation)
     end
 
-    it 'is a collection of aces' do
-      is_expected.to eq(described_class.with_rank(:ace))
+    it 'is a collection of cards with a rank of the method name' do
+      is_expected.to eq(described_class.with_rank(method))
     end
   end
 

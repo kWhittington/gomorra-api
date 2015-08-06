@@ -12,16 +12,21 @@ class PlayingCard < ActiveRecord::Base
   validates_associated :rank
   validates_associated :suit
 
-  def self.ace
-    with_rank(:ace)
-  end
-
   def self.exists_with_rank(name)
     includes(:rank).exists?(ranks: { name: name })
   end
 
   def self.exists_with_suit(name)
     includes(:suit).exists?(suits: { name: name })
+  end
+
+  def self.method_missing(method, *args, &block)
+    if exists_with_rank(method)
+      define_magic_rank_finder(method)
+      send(method)
+    else
+      super
+    end
   end
 
   def self.respond_to?(method, include_all = false)
@@ -34,5 +39,15 @@ class PlayingCard < ActiveRecord::Base
 
   def self.with_suit(name)
     includes(:suit).where(suits: { name: name })
+  end
+
+  protected
+
+  def self.define_magic_rank_finder(method)
+    class_eval <<-RUBY
+      def self.#{method}
+        with_rank(:#{method})
+      end
+    RUBY
   end
 end
