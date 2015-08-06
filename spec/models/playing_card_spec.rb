@@ -74,6 +74,18 @@ RSpec.describe PlayingCard, tags do
     end
   end
 
+  describe '.respond_to?(method)' do
+    subject(:respond_to) { described_class.respond_to?(method) }
+
+    context 'when method is a rank name' do
+      let(:method) { Rank.names.sample }
+
+      it 'is true' do
+        is_expected.to be_truthy
+      end
+    end
+  end
+
   describe '.with_rank(name)' do
     subject(:with_rank) { described_class.with_rank(name) }
     let(:name) { Rank.names.sample }
