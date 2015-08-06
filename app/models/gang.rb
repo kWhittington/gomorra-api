@@ -12,4 +12,8 @@
 # Think classic 'gang', vying for power and control in the town.
 class Gang < ActiveRecord::Base
   attr_readonly :name
+
+  validates :name,
+            presence: true,
+            uniqueness: { case_sensitive: false }
 end
