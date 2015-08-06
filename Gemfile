@@ -4,7 +4,7 @@ gem 'decent_exposure'
 gem 'factory_girl_rails'
 gem 'faker'
 gem 'jsonapi-serializers'
-gem 'pry'
+gem 'pry-rails', group: :development
 gem 'rails', '4.2.1'
 gem 'rails-api'
 gem 'require_all'
