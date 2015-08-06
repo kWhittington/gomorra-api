@@ -22,6 +22,18 @@ RSpec.describe PlayingCard, tags do
       .scoped_to(:suit_id)
   end
 
+  describe '.ace' do
+    subject(:ace) { described_class.ace }
+
+    it 'is a relation' do
+      is_expected.to be_an(ActiveRecord::Relation)
+    end
+
+    it 'is a collection of aces' do
+      is_expected.to eq(described_class.with_rank(:ace))
+    end
+  end
+
   describe '.exists_with_rank(name)' do
     subject(:exists_with_rank) { described_class.exists_with_rank(name) }
 

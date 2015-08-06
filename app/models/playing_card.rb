@@ -12,6 +12,10 @@ class PlayingCard < ActiveRecord::Base
   validates_associated :rank
   validates_associated :suit
 
+  def self.ace
+    with_rank(:ace)
+  end
+
   def self.exists_with_rank(name)
     includes(:rank).exists?(ranks: { name: name })
   end
