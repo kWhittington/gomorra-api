@@ -33,6 +33,10 @@ class PlayingCard < ActiveRecord::Base
     super || exists_with_rank(method)
   end
 
+  def self.of(suit)
+    with_suit(suit).first
+  end
+
   def self.with_rank(name)
     includes(:rank).where(ranks: { name: name })
   end

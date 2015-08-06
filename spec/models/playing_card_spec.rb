@@ -87,6 +87,21 @@ RSpec.describe PlayingCard, tags do
     end
   end
 
+  describe '.of(suit)' do
+    subject(:of) { described_class.of(suit) }
+    let(:suit) { Suit.names.sample }
+
+    it 'is a playing card' do
+      is_expected.to be_a(described_class)
+    end
+
+    it 'is the first playing card of the specified suit' do
+      playing_card = described_class.includes(:suit)
+                     .where(suits: { name: suit }).first
+      is_expected.to eq(playing_card)
+    end
+  end
+
   describe '.with_rank(name)' do
     subject(:with_rank) { described_class.with_rank(name) }
     let(:name) { Rank.names.sample }
