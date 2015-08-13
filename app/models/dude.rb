@@ -16,7 +16,12 @@
 class Dude < ActiveRecord::Base
   attr_readonly :bullet_type
   attr_readonly :bullets
-  attr_readonly :control
+  attr_readonly :cost
   attr_readonly :influence
+  attr_readonly :name
+  attr_readonly :text
   attr_readonly :upkeep
+
+  belongs_to :gang
+  belongs_to :playing_card
 end

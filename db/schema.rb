@@ -35,12 +35,19 @@ ActiveRecord::Schema.define(version: 20150616024444) do
   create_table "dudes", force: :cascade do |t|
     t.string   "bullet_type"
     t.integer  "bullets"
-    t.integer  "control"
+    t.string   "cost"
     t.integer  "influence"
+    t.string   "name"
+    t.string   "text"
     t.integer  "upkeep"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "gang_id"
+    t.integer  "playing_card_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
+
+  add_index "dudes", ["gang_id"], name: "index_dudes_on_gang_id"
+  add_index "dudes", ["playing_card_id"], name: "index_dudes_on_playing_card_id"
 
   create_table "gangs", force: :cascade do |t|
     t.string   "name",       null: false
