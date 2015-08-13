@@ -5,22 +5,20 @@ This api following the specifications of [JSON API](http://jsonapi.org)
 
 # V1 Schema
 ## Action
-- belongs_to :playing_card
 - cost (integer)
 - name (string)
 - text (string)
+- belongs_to :playing_card
 
 ## Deed
-- belongs_to :playing_card
 - control (integer)
 - cost (integer)
 - name (string)
 - production (integer)
 - text (string)
+- belongs_to :playing_card
 
 ## Dude
-- belongs_to :gang
-- belongs_to :playing_card
 - bullet_type (string)
 - bullets (integer)
 - cost (integer)
@@ -28,9 +26,10 @@ This api following the specifications of [JSON API](http://jsonapi.org)
 - name (string)
 - text (string)
 - upkeep (integer)
+- belongs_to :gang
+- belongs_to :playing_card
 
 # Goods
-- belongs_to :playing_card
 - bullet_bonus (integer, nullable)
 - bullet_type (string, nullable)
 - control (integer, nullable)
@@ -38,20 +37,21 @@ This api following the specifications of [JSON API](http://jsonapi.org)
 - influence (integer, nullable)
 - name (string)
 - text (string)
+- belongs_to :playing_card
 
 ## Outfit
-- belongs_to :playing_card
-- belongs_to :gang
 - name (string)
 - production (integer)
 - text (string)
 - treasury (integer)
+- belongs_to :playing_card
+- belongs_to :gang
 
 ## Spell
-- belongs_to :playing_card
 - cost (integer)
 - name (string)
 - text (string)
+- belongs_to :playing_card
 
 # > V1 Schema
 ## Ability
