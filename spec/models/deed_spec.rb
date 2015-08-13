@@ -28,10 +28,6 @@ RSpec.describe Deed, tags do
     is_expected.to have_readonly_attribute(:cost)
   end
 
-  it 'has readonly keywords' do
-    is_expected.to have_readonly_attribute(:keywords)
-  end
-
   it 'has readonly name' do
     is_expected.to have_readonly_attribute(:name)
   end
@@ -42,5 +38,9 @@ RSpec.describe Deed, tags do
 
   it 'has readonly text' do
     is_expected.to have_readonly_attribute(:text)
+  end
+
+  it 'belongs to a playing card' do
+    is_expected.to belong_to(:playing_card)
   end
 end

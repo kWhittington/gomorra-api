@@ -15,12 +15,10 @@
 
 FactoryGirl.define do
   factory :deed do
-    name "MyString"
-cost 1
-production 1
-control 1
-keywords "MyString"
-text "MyString"
+    control { Faker::Number.digit }
+    cost { Faker::Number.digit }
+    name { Faker::Lorem.word }
+    production { Faker::Number.digit }
+    text { Faker::Lorem.sentence }
   end
-
 end
