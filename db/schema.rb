@@ -61,11 +61,14 @@ ActiveRecord::Schema.define(version: 20150616024444) do
   add_index "gangs", ["name"], name: "index_gangs_on_name", unique: true
 
   create_table "goods", force: :cascade do |t|
-    t.integer  "cost"
-    t.string   "name"
     t.string   "bullet_type"
-    t.integer  "bullet_quantity"
+    t.integer  "bullet_bonus"
+    t.integer  "control"
+    t.integer  "cost"
     t.integer  "influence"
+    t.string   "name"
+    t.string   "text"
+    t.integer  "playing_card_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

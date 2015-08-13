@@ -19,12 +19,16 @@ tags = {
 }
 
 RSpec.describe Good, tags do
-  it 'has readonly bullet_quantity' do
-    is_expected.to have_readonly_attribute(:bullet_quantity)
+  it 'has readonly bullet_bonus' do
+    is_expected.to have_readonly_attribute(:bullet_bonus)
   end
 
   it 'has readonly bullet_type' do
     is_expected.to have_readonly_attribute(:bullet_type)
+  end
+
+  it 'has readonly control' do
+    is_expected.to have_readonly_attribute(:control)
   end
 
   it 'has readonly cost' do
@@ -37,5 +41,13 @@ RSpec.describe Good, tags do
 
   it 'has readonly name' do
     is_expected.to have_readonly_attribute(:name)
+  end
+
+  it 'has readonly text' do
+    is_expected.to have_readonly_attribute(:text)
+  end
+
+  it 'belongs to a playing card' do
+    is_expected.to belong_to(:playing_card)
   end
 end

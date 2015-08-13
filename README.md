@@ -31,8 +31,8 @@ This api following the specifications of [JSON API](http://jsonapi.org)
 
 # Goods
 - belongs_to :playing_card
-- bullet_type (string, nullable)
 - bullet_bonus (integer, nullable)
+- bullet_type (string, nullable)
 - control (integer, nullable)
 - cost (integer)
 - influence (integer, nullable)
