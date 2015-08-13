@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: ranks
+#
+#  id         :integer          not null, primary key
+#  name       :string           not null
+#  value      :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'support/models/rank_helper'
 require 'support/rails/rails_helper'
 

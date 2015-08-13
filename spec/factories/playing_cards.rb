@@ -3,9 +3,8 @@
 # Table name: playing_cards
 #
 #  id         :integer          not null, primary key
-#  suit       :string
-#  rank       :string
-#  value      :integer
+#  rank_id    :integer
+#  suit_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
