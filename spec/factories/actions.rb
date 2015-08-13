@@ -12,9 +12,8 @@
 
 FactoryGirl.define do
   factory :action do
-    name "MyString"
-text "MyString"
-cost 1
+    cost { Faker::Number.digit }
+    name { Faker::Lorem.word }
+    text { Faker::Lorem.sentence }
   end
-
 end

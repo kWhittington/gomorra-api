@@ -14,12 +14,15 @@
 ActiveRecord::Schema.define(version: 20150616024444) do
 
   create_table "actions", force: :cascade do |t|
+    t.integer  "cost"
     t.string   "name"
     t.string   "text"
-    t.integer  "cost"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "playing_card_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
+
+  add_index "actions", ["playing_card_id"], name: "index_actions_on_playing_card_id"
 
   create_table "deeds", force: :cascade do |t|
     t.string   "name"
