@@ -11,39 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150616024444) do
-
-  create_table "actions", force: :cascade do |t|
-    t.string   "name"
-    t.string   "text"
-    t.integer  "cost"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "deeds", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "cost"
-    t.integer  "production"
-    t.integer  "control"
-    t.string   "keywords"
-    t.string   "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20150610022714) do
 
   create_table "dudes", force: :cascade do |t|
-    t.string   "name"
     t.string   "bullet_type"
-    t.integer  "bullet_quantity"
-    t.integer  "influence"
+    t.integer  "bullets"
     t.integer  "control"
+    t.integer  "influence"
     t.integer  "upkeep"
-    t.integer  "cost"
-    t.string   "keywords"
-    t.string   "text"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "gangs", force: :cascade do |t|
@@ -53,16 +30,6 @@ ActiveRecord::Schema.define(version: 20150616024444) do
   end
 
   add_index "gangs", ["name"], name: "index_gangs_on_name", unique: true
-
-  create_table "goods", force: :cascade do |t|
-    t.integer  "cost"
-    t.string   "name"
-    t.string   "bullet_type"
-    t.integer  "bullet_quantity"
-    t.integer  "influence"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
 
   create_table "playing_cards", force: :cascade do |t|
     t.integer  "rank_id"
@@ -74,23 +41,5 @@ ActiveRecord::Schema.define(version: 20150616024444) do
   add_index "playing_cards", ["rank_id", "suit_id"], name: "index_playing_cards_on_rank_id_and_suit_id", unique: true
   add_index "playing_cards", ["rank_id"], name: "index_playing_cards_on_rank_id"
   add_index "playing_cards", ["suit_id"], name: "index_playing_cards_on_suit_id"
-
-  create_table "ranks", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.integer  "value",      null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "ranks", ["name"], name: "index_ranks_on_name", unique: true
-  add_index "ranks", ["value"], name: "index_ranks_on_value", unique: true
-
-  create_table "suits", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "suits", ["name"], name: "index_suits_on_name", unique: true
 
 end

@@ -18,15 +18,20 @@
 
 FactoryGirl.define do
   factory :dude do
-    name "MyString"
-bullet_type "MyString"
-bullet_quantity 1
-influence 1
-control 1
-upkeep 1
-cost 1
-keywords "MyString"
-text "MyString"
-  end
+    bullets { Faker::Number.digit }
+    control { Faker::Number.digit }
+    influence { Faker::Number.digit }
+    upkeep { Faker::Number.digit }
 
+    trait :draw do
+      bullet_type 'draw'
+    end
+
+    trait :stud do
+      bullet_type 'stud'
+    end
+
+    factory :draw_dude, traits: [:draw]
+    factory :stud_dude, traits: [:stud]
+  end
 end
