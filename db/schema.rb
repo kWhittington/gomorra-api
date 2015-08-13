@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150616024444) do
+ActiveRecord::Schema.define(version: 20150813024854) do
 
   create_table "actions", force: :cascade do |t|
     t.integer  "cost"
@@ -72,6 +72,20 @@ ActiveRecord::Schema.define(version: 20150616024444) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
+
+  create_table "outfits", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "production"
+    t.string   "text"
+    t.integer  "treasury"
+    t.integer  "playing_card_id"
+    t.integer  "gang_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "outfits", ["gang_id"], name: "index_outfits_on_gang_id"
+  add_index "outfits", ["playing_card_id"], name: "index_outfits_on_playing_card_id"
 
   create_table "playing_cards", force: :cascade do |t|
     t.integer  "rank_id"
