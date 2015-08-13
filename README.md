@@ -3,7 +3,57 @@ The Rails based web API for an implementation of Doomtown Reloaded.
 
 This api following the specifications of [JSON API](http://jsonapi.org)
 
-# Schema
+# V1 Schema
+## Action
+- belongs_to :playing_card
+- cost (integer)
+- name (string)
+- text (string)
+
+## Deed
+- belongs_to :playing_card
+- control (integer)
+- cost (integer)
+- name (string)
+- production (integer)
+- text (string)
+
+## Dude
+- belongs_to :gang
+- belongs_to :playing_card
+- bullet_type (string)
+- bullets (integer)
+- cost (integer)
+- influence (integer)
+- name (string)
+- text (string)
+- upkeep (integer)
+
+# Goods
+- belongs_to :playing_card
+- bullet_type (string, nullable)
+- bullet_bonus (integer, nullable)
+- control (integer, nullable)
+- cost (integer)
+- influence (integer, nullable)
+- name (string)
+- text (string)
+
+## Outfit
+- belongs_to :playing_card
+- belongs_to :gang
+- name (string)
+- production (integer)
+- text (string)
+- treasury (integer)
+
+## Spell
+- belongs_to :playing_card
+- cost (integer)
+- name (string)
+- text (string)
+
+# > V1 Schema
 ## Ability
 Associations
 - belongs_to :card
