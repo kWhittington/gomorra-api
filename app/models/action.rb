@@ -17,4 +17,9 @@ class Action < ActiveRecord::Base
   attr_readonly :text
 
   belongs_to :playing_card
+
+  validates :cost, presence: true
+  validates :name, presence: true
+  validates :text, presence: true
+  validates :playing_card, presence: true
 end

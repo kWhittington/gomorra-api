@@ -14,10 +14,10 @@
 ActiveRecord::Schema.define(version: 20150813030251) do
 
   create_table "actions", force: :cascade do |t|
-    t.integer  "cost"
-    t.string   "name"
-    t.string   "text"
-    t.integer  "playing_card_id"
+    t.integer  "cost",            null: false
+    t.string   "name",            null: false
+    t.string   "text",            null: false
+    t.integer  "playing_card_id", null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

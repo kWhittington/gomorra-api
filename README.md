@@ -29,6 +29,9 @@ This api following the specifications of [JSON API](http://jsonapi.org)
 - belongs_to :gang
 - belongs_to :playing_card
 
+# Gangs
+- name (string)
+
 # Goods
 - bullet_bonus (integer, nullable)
 - bullet_type (string, nullable)

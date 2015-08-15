@@ -32,4 +32,20 @@ RSpec.describe Action, tags do
   it 'belongs to a playing card' do
     is_expected.to belong_to(:playing_card)
   end
+
+  it 'validates presence of cost' do
+    is_expected.to validate_presence_of(:cost)
+  end
+
+  it 'validates presence of name' do
+    is_expected.to validate_presence_of(:name)
+  end
+
+  it 'validates presence of text' do
+    is_expected.to validate_presence_of(:text)
+  end
+
+  it 'validates presence of playing card' do
+    is_expected.to validate_presence_of(:playing_card)
+  end
 end
