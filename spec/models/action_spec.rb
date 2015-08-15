@@ -21,6 +21,10 @@ RSpec.describe Action, tags do
     is_expected.to have_readonly_attribute(:cost)
   end
 
+  it 'has readonly keywords' do
+    is_expected.to have_readonly_attribute(:keywords)
+  end
+
   it 'has readonly name' do
     is_expected.to have_readonly_attribute(:name)
   end
@@ -35,6 +39,10 @@ RSpec.describe Action, tags do
 
   it 'validates presence of cost' do
     is_expected.to validate_presence_of(:cost)
+  end
+
+  it 'validates presence of keywords' do
+    is_expected.to validate_presence_of(:keywords)
   end
 
   it 'validates presence of name' do
