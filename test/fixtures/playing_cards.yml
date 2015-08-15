@@ -63,55 +63,55 @@ king_of_clubs:
 
 ace_of_diamonds:
   rank: ace
-  suit: dimaonds
+  suit: diamonds
 
 duce_of_diamonds:
   rank: deuce
-  suit: dimaonds
+  suit: diamonds
 
 three_of_diamonds:
   rank: three
-  suit: dimaonds
+  suit: diamonds
 
 four_of_diamonds:
   rank: four
-  suit: dimaonds
+  suit: diamonds
 
 five_of_diamonds:
   rank: five
-  suit: dimaonds
+  suit: diamonds
 
 six_of_diamonds:
   rank: six
-  suit: dimaonds
+  suit: diamonds
 
 seven_of_diamonds:
   rank: seven
-  suit: dimaonds
+  suit: diamonds
 
 eight_of_diamonds:
   rank: eight
-  suit: dimaonds
+  suit: diamonds
 
 nine_of_diamonds:
   rank: nine
-  suit: dimaonds
+  suit: diamonds
 
 ten_of_diamonds:
   rank: ten
-  suit: dimaonds
+  suit: diamonds
 
 jack_of_diamonds:
   rank: jack
-  suit: dimaonds
+  suit: diamonds
 
 queen_of_diamonds:
   rank: queen
-  suit: dimaonds
+  suit: diamonds
 
 king_of_diamonds:
   rank: king
-  suit: dimaonds
+  suit: diamonds
 
 ace_of_hearts:
   rank: ace
