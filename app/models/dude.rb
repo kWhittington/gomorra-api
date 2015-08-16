@@ -14,6 +14,8 @@
 
 # A citizen of Gomorra Parish. Some might be more 'aggressive' than others.
 class Dude < ActiveRecord::Base
+  include Concerns::Keywordable
+
   attr_readonly :bullet_type
   attr_readonly :bullets
   attr_readonly :cost
