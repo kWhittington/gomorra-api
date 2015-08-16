@@ -15,5 +15,7 @@ FactoryGirl.define do
     cost { Faker::Number.digit }
     name { Faker::Lorem.word }
     text { Faker::Lorem.sentence }
+
+    association :playing_card
   end
 end
