@@ -13,6 +13,7 @@
 #  updated_at :datetime         not null
 #
 
+require 'support/models/concerns/buyable_helper'
 require 'support/models/concerns/keywordable_helper'
 require 'support/rails/rails_helper'
 
@@ -21,14 +22,11 @@ tags = {
 }
 
 RSpec.describe Deed, tags do
+  it_behaves_like 'buyable'
   it_behaves_like 'keywordable'
 
   it 'has readonly control' do
     is_expected.to have_readonly_attribute(:control)
-  end
-
-  it 'has readonly cost' do
-    is_expected.to have_readonly_attribute(:cost)
   end
 
   it 'has readonly name' do

@@ -16,10 +16,10 @@
 # A property in Gomorra Parish. It can generate control, production, usually a
 # trait, and maybe an action.
 class Deed < ActiveRecord::Base
+  include Concerns::Buyable
   include Concerns::Keywordable
 
   attr_readonly :control
-  attr_readonly :cost
   attr_readonly :name
   attr_readonly :production
   attr_readonly :text
