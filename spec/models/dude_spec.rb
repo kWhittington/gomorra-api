@@ -12,6 +12,7 @@
 #  updated_at  :datetime         not null
 #
 
+require 'support/models/concerns/buyable_helper'
 require 'support/models/concerns/keywordable_helper'
 require 'support/rails/rails_helper'
 
@@ -20,6 +21,7 @@ tags = {
 }
 
 RSpec.describe Dude, tags do
+  it_behaves_like 'buyable'
   it_behaves_like 'keywordable'
 
   it 'has readonly bullet_type' do
@@ -28,10 +30,6 @@ RSpec.describe Dude, tags do
 
   it 'has readonly bullets' do
     is_expected.to have_readonly_attribute(:bullets)
-  end
-
-  it 'has readonly cost' do
-    is_expected.to have_readonly_attribute(:cost)
   end
 
   it 'has readonly influence' do
