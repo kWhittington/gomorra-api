@@ -11,9 +11,7 @@
 
 FactoryGirl.define do
   factory :playing_card do
-    suit "MyString"
-rank "MyString"
-value 1
+    association :rank
+    association :suit
   end
-
 end
