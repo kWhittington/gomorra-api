@@ -14,6 +14,7 @@
 
 require 'support/models/concerns/buyable_helper'
 require 'support/models/concerns/keywordable_helper'
+require 'support/models/concerns/nameable_helper'
 require 'support/rails/rails_helper'
 
 tags = {
@@ -23,6 +24,7 @@ tags = {
 RSpec.describe Good, tags do
   it_behaves_like 'buyable'
   it_behaves_like 'keywordable'
+  it_behaves_like 'nameable'
 
   it 'has readonly bullet_bonus' do
     is_expected.to have_readonly_attribute(:bullet_bonus)
