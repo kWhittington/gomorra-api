@@ -6,7 +6,8 @@ module Concerns
     included do
       attr_readonly :name
       validates :name,
-                presence: true
+                presence: true,
+                uniqueness: { case_sensitive: false }
     end
   end
 end

@@ -20,6 +20,8 @@ tags = {
 }
 
 RSpec.describe Action, tags do
+  subject(:action) { build(:action) }
+
   it_behaves_like 'buyable'
   it_behaves_like 'keywordable'
   it_behaves_like 'nameable'
