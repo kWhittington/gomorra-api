@@ -1,3 +1,4 @@
+require 'support/models/concerns/nameable_helper'
 require 'support/rails/rails_helper'
 
 tags = {
@@ -5,9 +6,7 @@ tags = {
 }
 
 RSpec.describe Outfit, tags do
-  it 'has readonly name' do
-    is_expected.to have_readonly_attribute(:name)
-  end
+  it_behaves_like 'nameable'
 
   it 'has readonly production' do
     is_expected.to have_readonly_attribute(:production)

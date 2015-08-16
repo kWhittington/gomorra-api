@@ -1,5 +1,6 @@
 class Outfit < ActiveRecord::Base
-  attr_readonly :name
+  include Concerns::Nameable
+
   attr_readonly :production
   attr_readonly :text
   attr_readonly :treasury
