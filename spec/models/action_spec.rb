@@ -10,6 +10,7 @@
 #  updated_at :datetime         not null
 #
 
+require 'support/models/concerns/buyable_helper'
 require 'support/models/concerns/keywordable_helper'
 require 'support/rails/rails_helper'
 
@@ -18,11 +19,8 @@ tags = {
 }
 
 RSpec.describe Action, tags do
+  it_behaves_like 'buyable'
   it_behaves_like 'keywordable'
-
-  it 'has readonly cost' do
-    is_expected.to have_readonly_attribute(:cost)
-  end
 
   it 'has readonly name' do
     is_expected.to have_readonly_attribute(:name)
@@ -34,10 +32,6 @@ RSpec.describe Action, tags do
 
   it 'belongs to a playing card' do
     is_expected.to belong_to(:playing_card)
-  end
-
-  it 'validates presence of cost' do
-    is_expected.to validate_presence_of(:cost)
   end
 
   it 'validates presence of name' do

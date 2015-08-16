@@ -12,15 +12,14 @@
 
 # A playable card type in Doomtown. Typically move the game forward.
 class Action < ActiveRecord::Base
+  include Concerns::Buyable
   include Concerns::Keywordable
 
-  attr_readonly :cost
   attr_readonly :name
   attr_readonly :text
 
   belongs_to :playing_card
 
-  validates :cost, presence: true
   validates :name, presence: true
   validates :text, presence: true
   validates :playing_card, presence: true
