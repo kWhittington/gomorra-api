@@ -12,6 +12,7 @@
 
 require 'support/models/concerns/buyable_helper'
 require 'support/models/concerns/keywordable_helper'
+require 'support/models/concerns/nameable_helper'
 require 'support/rails/rails_helper'
 
 tags = {
@@ -21,10 +22,7 @@ tags = {
 RSpec.describe Action, tags do
   it_behaves_like 'buyable'
   it_behaves_like 'keywordable'
-
-  it 'has readonly name' do
-    is_expected.to have_readonly_attribute(:name)
-  end
+  it_behaves_like 'nameable'
 
   it 'has readonly text' do
     is_expected.to have_readonly_attribute(:text)
@@ -32,10 +30,6 @@ RSpec.describe Action, tags do
 
   it 'belongs to a playing card' do
     is_expected.to belong_to(:playing_card)
-  end
-
-  it 'validates presence of name' do
-    is_expected.to validate_presence_of(:name)
   end
 
   it 'validates presence of text' do
