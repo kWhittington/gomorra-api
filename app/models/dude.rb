@@ -16,11 +16,11 @@
 class Dude < ActiveRecord::Base
   include Concerns::Buyable
   include Concerns::Keywordable
+  include Concerns::Nameable
 
   attr_readonly :bullet_type
   attr_readonly :bullets
   attr_readonly :influence
-  attr_readonly :name
   attr_readonly :text
   attr_readonly :upkeep
 
