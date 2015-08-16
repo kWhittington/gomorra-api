@@ -7,5 +7,8 @@ module Concerns
   }
 
   RSpec.describe Keywordable, tags do
+    it 'is a concern' do
+      is_expected.to be_an(ActiveSupport::Concern)
+    end
   end
 end
