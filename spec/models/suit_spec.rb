@@ -8,6 +8,7 @@
 #  updated_at :datetime         not null
 #
 
+require 'support/models/concerns/nameable_helper'
 require 'support/models/suit_helper'
 require 'support/rails/rails_helper'
 
@@ -17,22 +18,9 @@ tags = {
 }
 
 RSpec.describe Suit, tags do
-  subject(:suit) { described_class.new(params) }
-  let(:params) { { name: name } }
-  let(:name) { Faker::Lorem.word }
+  subject(:suit) { build(:suit) }
 
-  it 'has readonly name' do
-    is_expected.to have_readonly_attribute(:name)
-  end
-
-  it 'validates presence of name' do
-    is_expected.to validate_presence_of(:name)
-  end
-
-  it 'validates uniqueness, case insensitive, of name' do
-    is_expected.to validate_uniqueness_of(:name)
-      .case_insensitive
-  end
+  it_behaves_like 'nameable'
 
   describe '.names' do
     subject(:names) { described_class.names }
