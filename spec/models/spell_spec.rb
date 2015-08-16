@@ -1,3 +1,4 @@
+require 'support/models/concerns/buyable_helper'
 require 'support/models/concerns/keywordable_helper'
 require 'support/rails/rails_helper'
 
@@ -6,11 +7,8 @@ tags = {
 }
 
 RSpec.describe Spell, tags do
+  it_behaves_like 'buyable'
   it_behaves_like 'keywordable'
-
-  it 'has a readonly cost' do
-    is_expected.to have_readonly_attribute(:cost)
-  end
 
   it 'has a readonly name' do
     is_expected.to have_readonly_attribute(:name)

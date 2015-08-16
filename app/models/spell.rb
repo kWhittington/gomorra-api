@@ -1,7 +1,7 @@
 class Spell < ActiveRecord::Base
+  include Concerns::Buyable
   include Concerns::Keywordable
 
-  attr_readonly :cost
   attr_readonly :name
   attr_readonly :text
 
