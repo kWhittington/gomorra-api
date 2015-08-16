@@ -12,6 +12,7 @@
 #  updated_at      :datetime         not null
 #
 
+require 'support/models/concerns/keywordable_helper'
 require 'support/rails/rails_helper'
 
 tags = {
@@ -19,6 +20,8 @@ tags = {
 }
 
 RSpec.describe Good, tags do
+  it_behaves_like 'keywordable'
+
   it 'has readonly bullet_bonus' do
     is_expected.to have_readonly_attribute(:bullet_bonus)
   end
