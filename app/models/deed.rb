@@ -18,9 +18,9 @@
 class Deed < ActiveRecord::Base
   include Concerns::Buyable
   include Concerns::Keywordable
+  include Concerns::Nameable
 
   attr_readonly :control
-  attr_readonly :name
   attr_readonly :production
   attr_readonly :text
 
