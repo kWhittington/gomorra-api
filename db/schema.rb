@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150816002528) do
+ActiveRecord::Schema.define(version: 20150816002854) do
 
   create_table "actions", force: :cascade do |t|
     t.integer  "cost",            null: false
@@ -119,6 +119,7 @@ ActiveRecord::Schema.define(version: 20150816002528) do
     t.integer  "playing_card_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "keywords"
   end
 
   add_index "spells", ["playing_card_id"], name: "index_spells_on_playing_card_id"
