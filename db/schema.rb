@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150816002854) do
+ActiveRecord::Schema.define(version: 20150817011123) do
 
   create_table "actions", force: :cascade do |t|
     t.integer  "cost",            null: false
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 20150816002854) do
   end
 
   add_index "actions", ["playing_card_id"], name: "index_actions_on_playing_card_id"
+
+  create_table "bullets", force: :cascade do |t|
+    t.string   "cartridge",  null: false
+    t.string   "quantity",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "bullets", ["cartridge", "quantity"], name: "index_bullets_on_cartridge_and_quantity", unique: true
 
   create_table "deeds", force: :cascade do |t|
     t.integer  "control"
