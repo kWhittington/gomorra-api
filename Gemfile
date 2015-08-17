@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'annotate'
 gem 'decent_exposure'
 gem 'factory_girl_rails'
 gem 'faker'
@@ -13,6 +14,5 @@ gem 'rspec-collection_matchers'
 gem 'rubocop', group: :development, require: false
 gem 'seed-fu'
 gem 'shoulda-matchers', group: :test
-gem 'spring', group: :development
+gem 'spring-commands-rspec', group: [:development, :test]
 gem 'sqlite3'
-gem 'annotate'
