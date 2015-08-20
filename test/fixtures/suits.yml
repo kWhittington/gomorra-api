@@ -1,11 +1,21 @@
-club:
-  name: 'club'
+# == Schema Information
+#
+# Table name: suits
+#
+#  id         :integer          not null, primary key
+#  name       :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 
-diamond:
-  name: 'diamond'
+clubs:
+  name: 'clubs'
 
-heart:
-  name: 'heart'
+diamonds:
+  name: 'diamonds'
 
-spade:
-  name: 'spade'
+hearts:
+  name: 'hearts'
+
+spades:
+  name: 'spades'

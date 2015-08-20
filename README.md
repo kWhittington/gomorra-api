@@ -3,118 +3,144 @@ The Rails based web API for an implementation of Doomtown Reloaded.
 
 This api following the specifications of [JSON API](http://jsonapi.org)
 
-Schema
-======
+# V1 Schema
+## Action
+- cost (integer)
+- name (string)
+- text (string)
+- belongs_to :playing_card
 
-Ability
--------
+## Deed
+- control (integer)
+- cost (integer)
+- name (string)
+- production (integer)
+- text (string)
+- belongs_to :playing_card
+
+## Dude
+- bullet_type (string)
+- bullets (integer)
+- cost (integer)
+- influence (integer)
+- name (string)
+- text (string)
+- upkeep (integer)
+- belongs_to :gang
+- belongs_to :playing_card
+
+# Gangs
+- name (string)
+
+# Goods
+- bullet_bonus (integer, nullable)
+- bullet_type (string, nullable)
+- control (integer, nullable)
+- cost (integer)
+- influence (integer, nullable)
+- name (string)
+- text (string)
+- belongs_to :playing_card
+
+## Outfit
+- name (string)
+- production (integer)
+- text (string)
+- treasury (integer)
+- belongs_to :playing_card
+- belongs_to :gang
+
+## Spell
+- cost (integer)
+- name (string)
+- text (string)
+- belongs_to :playing_card
+
+# > V1 Schema
+## Ability
 Associations
-* belongs_to :card
+- belongs_to :card
 
 Attributes
-* ability_cost
-* ghost_rock_cost
-* play_phase
-* repeat (bool)
-* effect
+- ability_cost
+- ghost_rock_cost
+- play_phase
+- repeat (bool)
+- effect
 
-Action < Card
-------
-Attributes
-* suit #=> club
-* belongs_to :playing_card (suit, rank)
-
-BulletModifier
---------------
+## Action
 Associations
-* belongs_to :clip
+- has_one :card, as: :cardable
 
-Attributes
-* type (ex. stud, draw)
-* rating (ex. -1, +3)
-
-Clip
-----
+## DoomtownCard
 Associations
-* belongs_to :dude
-* has_zero_or_many :bullet_modifiers
-* has_one :bullets, as: :bullet_modifier
-
-Card
-----
-Associations
-* belongs_to :gang
-* has_zero_or_many :abilities
-* has_zero_or_many :keywords
-* has_zero_or_many :traits
+- belongs_to :gang
+- belongs_to :cardable, polymorphic: true
+- (cardable_type: [Action, Deed, Dude, Goods, Spell])
+- belongs_to :playing_card
+- has_zero_or_many :abilities
+- has_zero_or_many :keywords
+- has_zero_or_many :traits
 
 Attributes
-* artwork
-* card_type => [Action, Deed, Dude, Goods, Spell]
-* flavor_text
-* title
-* text
+- artwork
+- flavor_text
+- title
+- text
 
-Deed < Card
------------
+## Deed
 Associations
-* belongs_to :playing_card (suit, rank)
+- has_one :card, as: :cardable
 
 Attributes
-* control
-* production
-* suit #=> :diamond
+- control
+- production
 
-Dude < Card
-----
+## Dude
 Associations
-* has_a :clip
-* belongs_to :playing_card (suit, rank)
+- has_one :card, as: :cardable
 
 Attributes
-* control
-* influence
-* suit #=> :spade
-* upkeep
+- bullet_bonus
+- bullet_type
+- control
+- influence
+- upkeep
 
-Gang
-----
+## Gang
 Associations
-* has_zero_or_many :cards
+- has_zero_or_many :cards
 
 Attributes
-* name
+- name
 
-Goods < Card
------
+## Goods
 Associations
-* has_zero_or_one :cartridge_belt
-* belongs_to :playing_card (suit, rank)
+- has_one :card, as: :cardable
 
 Attributes
-* control
-* influence
-* suit #=> :heart
+- bullet_bonus
+- bullet_type
+- control
+- influence
 
-Joker < Card
------
-
-Keyword
--------
+## Joker
+## Keyword
 Associations
-* has_many :cards
+- has_many :cards
 
-Outfit < Card
-------
-Attributes
-* production
-* treasury
-
-Trait
------
+## Outfit
 Associations
-* belongs_to :card
+- has_one :card, as: :cardable
 
 Attributes
-* play_phase
-* effect
+- production
+- treasury
+
+## Trait
+Associations
+- belongs_to :card
+
+Attributes
+- play_phase
+- effect

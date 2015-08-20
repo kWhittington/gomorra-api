@@ -14,9 +14,15 @@
 
 # An item, spell, sidekick, or weapon a dude can be equipped with.
 class Good < ActiveRecord::Base
-  attr_readonly :bullet_quantity
+  include Concerns::Buyable
+  include Concerns::Keywordable
+  include Concerns::Nameable
+
+  attr_readonly :bullet_bonus
   attr_readonly :bullet_type
-  attr_readonly :cost
+  attr_readonly :control
   attr_readonly :influence
-  attr_readonly :name
+  attr_readonly :text
+
+  belongs_to :playing_card
 end

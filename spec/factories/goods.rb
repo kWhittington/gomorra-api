@@ -14,11 +14,8 @@
 
 FactoryGirl.define do
   factory :good do
-    cost 1
-name "MyString"
-bullet_type "MyString"
-bullet_quantity 1
-influence 1
+    cost { Faker::Number.digit }
+    name { Faker::Lorem.word }
+    text { Faker::Lorem.sentence }
   end
-
 end

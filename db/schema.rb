@@ -11,40 +11,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150616024444) do
+ActiveRecord::Schema.define(version: 20150816002854) do
 
   create_table "actions", force: :cascade do |t|
-    t.string   "name"
-    t.string   "text"
-    t.integer  "cost"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "cost",            null: false
+    t.string   "name",            null: false
+    t.string   "text",            null: false
+    t.integer  "playing_card_id", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "keywords"
   end
 
+  add_index "actions", ["playing_card_id"], name: "index_actions_on_playing_card_id"
+
   create_table "deeds", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "cost"
-    t.integer  "production"
     t.integer  "control"
-    t.string   "keywords"
+    t.integer  "cost"
+    t.string   "name"
+    t.integer  "production"
     t.string   "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "playing_card_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "keywords"
   end
 
   create_table "dudes", force: :cascade do |t|
-    t.string   "name"
     t.string   "bullet_type"
-    t.integer  "bullet_quantity"
+    t.integer  "bullets"
+    t.string   "cost"
     t.integer  "influence"
-    t.integer  "control"
-    t.integer  "upkeep"
-    t.integer  "cost"
-    t.string   "keywords"
+    t.string   "name"
     t.string   "text"
+    t.integer  "upkeep"
+    t.integer  "gang_id"
+    t.integer  "playing_card_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "keywords"
   end
+
+  add_index "dudes", ["gang_id"], name: "index_dudes_on_gang_id"
+  add_index "dudes", ["playing_card_id"], name: "index_dudes_on_playing_card_id"
 
   create_table "gangs", force: :cascade do |t|
     t.string   "name",       null: false
@@ -55,14 +64,32 @@ ActiveRecord::Schema.define(version: 20150616024444) do
   add_index "gangs", ["name"], name: "index_gangs_on_name", unique: true
 
   create_table "goods", force: :cascade do |t|
-    t.integer  "cost"
-    t.string   "name"
     t.string   "bullet_type"
-    t.integer  "bullet_quantity"
+    t.integer  "bullet_bonus"
+    t.integer  "control"
+    t.integer  "cost"
     t.integer  "influence"
+    t.string   "name"
+    t.string   "text"
+    t.integer  "playing_card_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "keywords"
+  end
+
+  create_table "outfits", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "production"
+    t.string   "text"
+    t.integer  "treasury"
+    t.integer  "playing_card_id"
+    t.integer  "gang_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
+
+  add_index "outfits", ["gang_id"], name: "index_outfits_on_gang_id"
+  add_index "outfits", ["playing_card_id"], name: "index_outfits_on_playing_card_id"
 
   create_table "playing_cards", force: :cascade do |t|
     t.integer  "rank_id"
@@ -76,14 +103,26 @@ ActiveRecord::Schema.define(version: 20150616024444) do
   add_index "playing_cards", ["suit_id"], name: "index_playing_cards_on_suit_id"
 
   create_table "ranks", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "value"
+    t.string   "name",       null: false
+    t.integer  "value",      null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_index "ranks", ["name"], name: "index_ranks_on_name", unique: true
   add_index "ranks", ["value"], name: "index_ranks_on_value", unique: true
+
+  create_table "spells", force: :cascade do |t|
+    t.integer  "cost"
+    t.string   "name"
+    t.string   "text"
+    t.integer  "playing_card_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "keywords"
+  end
+
+  add_index "spells", ["playing_card_id"], name: "index_spells_on_playing_card_id"
 
   create_table "suits", force: :cascade do |t|
     t.string   "name",       null: false

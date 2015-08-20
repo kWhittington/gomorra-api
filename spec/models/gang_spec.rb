@@ -8,6 +8,7 @@
 #  updated_at :datetime         not null
 #
 
+require 'support/models/concerns/nameable_helper'
 require 'support/rails/rails_helper'
 
 tags = {
@@ -16,7 +17,7 @@ tags = {
 }
 
 RSpec.describe Gang, tags do
-  it 'has readonly name' do
-    is_expected.to have_readonly_attribute :name
-  end
+  subject(:gang) { build(:gang) }
+
+  it_behaves_like 'nameable'
 end

@@ -1,12 +1,13 @@
 class CreateDeeds < ActiveRecord::Migration
   def change
     create_table :deeds do |t|
-      t.string :name
-      t.integer :cost
-      t.integer :production
       t.integer :control
-      t.string :keywords
+      t.integer :cost
+      t.string :name
+      t.integer :production
       t.string :text
+
+      t.belongs_to :playing_card
 
       t.timestamps null: false
     end

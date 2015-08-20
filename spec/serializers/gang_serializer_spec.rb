@@ -45,10 +45,5 @@ RSpec.describe GangSerializer, tags do
     it 'has a links object for the primary data' do
       is_expected.to have_primary_data.with_link 'self', "/gangs/#{model.id}"
     end
-
-    it 'has no relationships for the primary data' do
-      expect(serialize['data']).to have_key 'relationships'
-      expect(serialize['data']['relationships']).to be_empty
-    end
   end
 end

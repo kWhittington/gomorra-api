@@ -1,207 +1,218 @@
+# == Schema Information
+#
+# Table name: playing_cards
+#
+#  id         :integer          not null, primary key
+#  rank_id    :integer
+#  suit_id    :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 ace_of_clubs:
   rank: ace
-  suit: club
+  suit: clubs
 
 duce_of_clubs:
   rank: deuce
-  suit: club
+  suit: clubs
 
 three_of_clubs:
   rank: three
-  suit: club
+  suit: clubs
 
 four_of_clubs:
   rank: four
-  suit: club
+  suit: clubs
 
 five_of_clubs:
   rank: five
-  suit: club
+  suit: clubs
 
 six_of_clubs:
   rank: six
-  suit: club
+  suit: clubs
 
 seven_of_clubs:
   rank: seven
-  suit: club
+  suit: clubs
 
 eight_of_clubs:
   rank: eight
-  suit: club
+  suit: clubs
 
 nine_of_clubs:
   rank: nine
-  suit: club
+  suit: clubs
 
 ten_of_clubs:
   rank: ten
-  suit: club
+  suit: clubs
 
 jack_of_clubs:
   rank: jack
-  suit: club
+  suit: clubs
 
 queen_of_clubs:
   rank: queen
-  suit: club
+  suit: clubs
 
 king_of_clubs:
   rank: king
-  suit: club
+  suit: clubs
 
 ace_of_diamonds:
   rank: ace
-  suit: diamond
+  suit: diamonds
 
 duce_of_diamonds:
   rank: deuce
-  suit: diamond
+  suit: diamonds
 
 three_of_diamonds:
   rank: three
-  suit: diamond
+  suit: diamonds
 
 four_of_diamonds:
   rank: four
-  suit: diamond
+  suit: diamonds
 
 five_of_diamonds:
   rank: five
-  suit: diamond
+  suit: diamonds
 
 six_of_diamonds:
   rank: six
-  suit: diamond
+  suit: diamonds
 
 seven_of_diamonds:
   rank: seven
-  suit: diamond
+  suit: diamonds
 
 eight_of_diamonds:
   rank: eight
-  suit: diamond
+  suit: diamonds
 
 nine_of_diamonds:
   rank: nine
-  suit: diamond
+  suit: diamonds
 
 ten_of_diamonds:
   rank: ten
-  suit: diamond
+  suit: diamonds
 
 jack_of_diamonds:
   rank: jack
-  suit: diamond
+  suit: diamonds
 
 queen_of_diamonds:
   rank: queen
-  suit: diamond
+  suit: diamonds
 
 king_of_diamonds:
   rank: king
-  suit: diamond
+  suit: diamonds
 
 ace_of_hearts:
   rank: ace
-  suit: heart
+  suit: hearts
 
 duce_of_hearts:
   rank: deuce
-  suit: heart
+  suit: hearts
 
 three_of_hearts:
   rank: three
-  suit: heart
+  suit: hearts
 
 four_of_hearts:
   rank: four
-  suit: heart
+  suit: hearts
 
 five_of_hearts:
   rank: five
-  suit: heart
+  suit: hearts
 
 six_of_hearts:
   rank: six
-  suit: heart
+  suit: hearts
 
 seven_of_hearts:
   rank: seven
-  suit: heart
+  suit: hearts
 
 eight_of_hearts:
   rank: eight
-  suit: heart
+  suit: hearts
 
 nine_of_hearts:
   rank: nine
-  suit: heart
+  suit: hearts
 
 ten_of_hearts:
   rank: ten
-  suit: heart
+  suit: hearts
 
 jack_of_hearts:
   rank: jack
-  suit: heart
+  suit: hearts
 
 queen_of_hearts:
   rank: queen
-  suit: heart
+  suit: hearts
 
 king_of_hearts:
   rank: king
-  suit: heart
+  suit: hearts
 
 ace_of_spades:
   rank: ace
-  suit: spade
+  suit: spades
 
 duce_of_spades:
   rank: deuce
-  suit: spade
+  suit: spades
 
 three_of_spades:
   rank: three
-  suit: spade
+  suit: spades
 
 four_of_spades:
   rank: four
-  suit: spade
+  suit: spades
 
 five_of_spades:
   rank: five
-  suit: spade
+  suit: spades
 
 six_of_spades:
   rank: six
-  suit: spade
+  suit: spades
 
 seven_of_spades:
   rank: seven
-  suit: spade
+  suit: spades
 
 eight_of_spades:
   rank: eight
-  suit: spade
+  suit: spades
 
 nine_of_spades:
   rank: nine
-  suit: spade
+  suit: spades
 
 ten_of_spades:
   rank: ten
-  suit: spade
+  suit: spades
 
 jack_of_spades:
   rank: jack
-  suit: spade
+  suit: spades
 
 queen_of_spades:
   rank: queen
-  suit: spade
+  suit: spades
 
 king_of_spades:
   rank: king
-  suit: spade
+  suit: spades

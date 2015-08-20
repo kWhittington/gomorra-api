@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: suits
+#
+#  id         :integer          not null, primary key
+#  name       :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+require 'support/models/concerns/nameable_helper'
+require 'support/models/suit_helper'
 require 'support/rails/rails_helper'
 
 tags = {
@@ -6,27 +18,15 @@ tags = {
 }
 
 RSpec.describe Suit, tags do
-  subject(:suit) { described_class.of(name) }
-  let(:name) { Faker::Lorem.word.pluralize }
+  subject(:suit) { build(:suit) }
 
-  it 'has a #name reader' do
-    is_expected.to respond_to(:name)
-  end
+  it_behaves_like 'nameable'
 
-  it 'has no .new method' do
-    expect(described_class).not_to respond_to(:new)
-  end
+  describe '.names' do
+    subject(:names) { described_class.names }
 
-  describe '.of(name)' do
-    subject(:of) { described_class.of(name) }
-    let(:name) { Faker::Lorem.word.pluralize }
-
-    it 'is a suit' do
-      is_expected.to be_a(described_class)
-    end
-
-    it 'has the specified name' do
-      is_expected.to have_attributes(name: name)
+    it 'is a collection of all suit names' do
+      is_expected.to eq(described_class.pluck(:name))
     end
   end
 end

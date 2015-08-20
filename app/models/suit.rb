@@ -1,13 +1,18 @@
+# == Schema Information
+#
+# Table name: suits
+#
+#  id         :integer          not null, primary key
+#  name       :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 # A standard 52-count bicycle deck suit of cards.
-class Suit
-  attr_reader :name
-  private_class_method :new
+class Suit < ActiveRecord::Base
+  include Concerns::Nameable
 
-  def self.of(name)
-    new(name: name)
-  end
-
-  def initialize(name:)
-    @name = name
+  def self.names
+    pluck(:name)
   end
 end
